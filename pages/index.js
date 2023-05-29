@@ -3,35 +3,25 @@
 // // import { useAuth } from '../utils/context/authContext'; // TODO: COMMENT IN FOR AUTH
 // import { useState, useEffect } from 'react';
 // import getDigitalAssets from '../api/digitalAssets';
+// // import ProductCard from '../components/ProductCard';
 // // import { Card } from 'react-bootstrap';
 
 // function Home() {
 //   // const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
-//   // const [video, setVideos] = useState();
+//   const [product, setProducts] = useState();
 
-//   const seePlaylistVideos = () => {
-//     getDigitalAssets().then(setVideos);
+//   const displayProducts = () => {
+//     getDigitalAssets().then(setProducts);
 //   };
 
 //   useEffect(() => {
-//     seePlaylistVideos();
-//   }, []);
-//   // const user = { displayName: 'Jovanni' }; // TODO: COMMENT OUT FOR AUTH
-//   return (
-//     <div
-//       className="text-center d-flex flex-column justify-content-center align-content-center"
-//       style={{
-//         height: '90vh',
-//         padding: '30px',
-//         maxWidth: '400px',
-//         margin: '0 auto',
-//       }}
-//     >
-
-//       {/* <h1>Hello {user.displayName}! </h1> */}
-//       {/* <Card key={video} /> */}
-//     </div>
-//   );
-// }
+//     displayProducts();
+//  }, []);
+//   return(
+//     <div>
+//       Hello
+//   </div>
+//   )
+// };
 
 // export default Home;
