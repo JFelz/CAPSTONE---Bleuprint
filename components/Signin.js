@@ -18,6 +18,9 @@ function Signin() {
       <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
         Sign In
       </Button>
+      {/* <Button type="button" size="lg" className="copy-btn" onClick={signInBusiness}>
+         Business Login
+      </Button> */}
     </div>
   );
 }
