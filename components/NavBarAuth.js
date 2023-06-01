@@ -8,7 +8,7 @@ import { signOut } from '../utils/auth';
 
 export default function NavBarAuth() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="242424" variant="dark">
       <Container>
         <Link passHref href="/">
           <Navbar.Brand>Bleuprint</Navbar.Brand>
