@@ -2,16 +2,17 @@
 import React from 'react';
 import Link from 'next/link';
 import {
-  Navbar, Container, Nav, Button,
+  Navbar, Container, Nav, Button, Image,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import companyLogo from '../public/CapTitle.png';
 
 export default function NavBarAuth() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="242424" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="#242424" variant="dark">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand>Bleuprint</Navbar.Brand>
+          <Navbar.Brand style={{ color: '#35CEB3', fontFamily: 'Poppins', fontWeight: 'Bold' }}><Image src={companyLogo} alt="company logo" /></Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
