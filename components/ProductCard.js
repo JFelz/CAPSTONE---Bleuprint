@@ -21,7 +21,7 @@ export default function ProductCard({ productObj }) {
               minHeight: '15px',
               fontFamily: 'Poppins',
               fontWeight: 'Bold',
-              fontSize: '18px',
+              fontSize: '16px',
             }}
             >{productObj.name}
             </Card.Title>
