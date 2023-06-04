@@ -4,7 +4,7 @@ import {
   useEffect,
 } from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
-import getDigitalAssets from '../api/digitalAssets';
+import { getDigitalAssets } from '../api/digitalAssets';
 import ProductCard from './ProductCard';
 
 export default function CategoryBar() {
