@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function ProductCard({ productObj }) {
   return (
     <>
-      <Link href={`/index/${productObj}`} passHref>
+      <Link href={`/Manageproducts/${productObj.firebaseKey}`} passHref>
         <Card style={{
           height: '400px',
           width: '250px',
@@ -14,7 +14,15 @@ export default function ProductCard({ productObj }) {
           cursor: 'pointer',
         }}
         >
-          <Card.Img variant="top" src={productObj.imageUrl} alt="Image Failure" style={{ height: '200px' }} />
+          <Card.Img
+            variant="top"
+            src={productObj.imageUrl}
+            alt="Image Failure"
+            style={{
+              height: '200px',
+              imageSize: 'cover',
+            }}
+          />
           <Card.Body style={{ marginTop: '5px' }}>
             <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{productObj.category}</Card.Subtitle>
             <Card.Title style={{
@@ -25,7 +33,7 @@ export default function ProductCard({ productObj }) {
             }}
             >{productObj.name}
             </Card.Title>
-            <Card.Subtitle>by {productObj.seller}</Card.Subtitle>
+            <Card.Subtitle>by { productObj.userName } </Card.Subtitle>
 
           </Card.Body>
           <Card.Footer className="text-muted">
@@ -53,6 +61,9 @@ ProductCard.propTypes = {
     price: PropTypes.number,
     seller: PropTypes.string,
     category: PropTypes.string,
+    uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
   }).isRequired,
   // onUpdate: PropTypes.func.isRequired,
 };

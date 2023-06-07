@@ -76,6 +76,114 @@ const getUserDigitalAssets = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getProps = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets.json?orderBy="category"&equalTo="props"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getTexturing = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets.json?orderBy="category"&equalTo="texturing"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getCharacterArt = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets.json?orderBy="category"&equalTo="character art"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getEnvironmentArt = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets.json?orderBy="category"&equalTo="environment art"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getLighting = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets.json?orderBy="category"&equalTo="lighting"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getProcedural = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets.json?orderBy="category"&equalTo="procedural"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
 const getSingleDigitalAssets = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${dbURL}/digitalAssets/${firebaseKey}.json`, {
     method: 'GET',
@@ -89,6 +197,12 @@ const getSingleDigitalAssets = (firebaseKey) => new Promise((resolve, reject) =>
 });
 
 export {
+  getProps,
+  getTexturing,
+  getLighting,
+  getProcedural,
+  getEnvironmentArt,
+  getCharacterArt,
   getDigitalAssets,
   deleteDigitalAssets,
   createDigitalAssets,

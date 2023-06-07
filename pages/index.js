@@ -9,23 +9,8 @@ import CategoryBar from '../components/FilterBar';
 // import { Card } from 'react-bootstrap';
 
 function Home() {
-  // const { user } = useAuth(); // TODO: COMMENT IN FOR AUTH
-  // const [products, setProducts] = useState();
-
-  // const displayProducts = () => {
-  //   getDigitalAssets().then(setProducts);
-  // };
-
-  // useEffect(() => {
-  //   displayProducts();
-  // }, []);
   return (
     <CategoryBar />
-  // {/* <CategoryBar /> */}
-  // {/* <div className='d-flex flex-wrap'>
-  // {/* {products?.map((product) => <ProductCard key={product.firebaseKey} productObj={product} onUpdate={displayProducts} />)} */}
-  // {/* </div> */}
-
   );
 }
 

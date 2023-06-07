@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Form from 'react-bootstrap/Form';
+import { Form } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
@@ -8,13 +8,13 @@ import { useAuth } from '../utils/context/authContext';
 import { createDigitalAssets, updateDigitalAssets } from '../api/digitalAssets';
 
 const initialState = {
-  productName: '',
-  productDescription: '',
-  imageThumbnail: '',
+  name: '',
+  description: '',
+  imageUrl: '',
   imageUrl_1: '',
   imageUrl_2: '',
   imageUrl_3: '',
-  pricing: 0,
+  price: 0,
   category: '',
 };
 
@@ -31,13 +31,13 @@ function CreateAssetForm({ obj }) {
     e.preventDefault();
     if (obj.firebaseKey) {
       updateDigitalAssets(formInput)
-        .then(() => router.push('/explore'));
+        .then(() => router.push('/'));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = { ...formInput, uid: user.uid, userName: user.displayName };
       createDigitalAssets(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateDigitalAssets(patchPayload).then(() => {
-          router.push('/explore');
+          router.push('/');
         });
       });
     }
@@ -53,90 +53,25 @@ function CreateAssetForm({ obj }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Listing</h2>
+      <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Product</h2>
 
       {/* TITLE INPUT  */}
-      <FloatingLabel controlId="floatingInput1" label="Listing Title" className="mb-3">
+      <FloatingLabel controlId="floatingInput1" label="Product Name" className="mb-3">
         <Form.Control
           type="text"
-          placeholder="Listing Title"
-          name="title"
-          value={formInput.title}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
-      {/* LOCATION INPUT  */}
-      <FloatingLabel controlId="floatingInput2" label="City, State" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="City, State"
-          name="location"
-          value={formInput.location}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
-      {/* Property type SELECT  */}
-      <FloatingLabel controlId="floatingSelect" label="Property Type">
-        <Form.Select
-          aria-label="property type"
-          name="propertyType"
-          onChange={handleChange}
-          className="mb-3"
-          value={formInput.propertyType} // FIXME: modify code to remove error
-          required
-        >
-          <option value="">Select...</option>
-          <option value="House">House</option>
-          <option value="Apartment">Apartment</option>
-          <option value="Condo">Condo</option>
-          <option value="Camper">Camper</option>
-        </Form.Select>
-      </FloatingLabel>
-
-      {/* PRICE INPUT  */}
-      <FloatingLabel controlId="floatingInput3" label="Beds" className="mb-3">
-        <Form.Control
-          type="number"
-          placeholder="Beds"
-          name="beds"
-          value={formInput.beds}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
-      <FloatingLabel controlId="floatingInput3" label="Baths" className="mb-3">
-        <Form.Control
-          type="number"
-          placeholder="Baths"
-          name="baths"
-          value={formInput.baths}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
-      {/* PRICE INPUT  */}
-      <FloatingLabel controlId="floatingInput3" label="Listing Price" className="mb-3">
-        <Form.Control
-          type="number"
-          placeholder="Enter price"
-          name="pricePerNight"
-          value={formInput.pricePerNight}
+          placeholder="name"
+          name="name"
+          value={formInput.name}
           onChange={handleChange}
           required
         />
       </FloatingLabel>
 
       {/* DESCRIPTION TEXTAREA  */}
-      <FloatingLabel controlId="floatingTextarea" label="Description" className="mb-3">
+      <FloatingLabel controlId="floatingTextarea" label="Product Description" className="mb-3">
         <Form.Control
           as="textarea"
-          placeholder="Description"
+          placeholder="description"
           style={{ height: '100px' }}
           name="description"
           value={formInput.description}
@@ -145,18 +80,7 @@ function CreateAssetForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput3" label="Amenities" className="mb-3">
-        <Form.Control
-          type="text"
-          placeholder="amenities"
-          name="amenities"
-          value={formInput.amenities}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
-      <FloatingLabel controlId="floatingInput2" label="Property Image" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Main Product Image" className="mb-3">
         <Form.Control
           type="url"
           placeholder="Enter an image url"
@@ -167,76 +91,89 @@ function CreateAssetForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="Enter an interior image url" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Enter a second product image" className="mb-3">
         <Form.Control
           type="url"
           placeholder="Enter an interior image url"
           name="secondImg"
-          value={formInput.secondImg}
+          value={formInput.imageUrl_1}
           onChange={handleChange}
           required
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="Enter another interior image url" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Enter a third product image" className="mb-3">
         <Form.Control
           type="url"
           placeholder="Enter another interior image url"
-          name="thirdImg"
-          value={formInput.thirdImg}
+          name="imageUrl_2"
+          value={formInput.imageUrl_2}
           onChange={handleChange}
           required
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="Enter one more interior image url" className="mb-3">
+      <FloatingLabel controlId="floatingInput2" label="Enter a fourth product image" className="mb-3">
         <Form.Control
           type="url"
           placeholder="Enter one more interior image url"
-          name="fourthImg"
-          value={formInput.fourthImg}
+          name="imageUrl_3"
+          value={formInput.imageUrl_3}
           onChange={handleChange}
           required
         />
       </FloatingLabel>
 
-      {/* A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
-      <Form.Check
-        className="text-black mb-3"
-        type="switch"
-        id="petsAllowed"
-        name="petsAllowed"
-        label="Pets Allowed?"
-        checked={formInput.petsAllowed}
-        onChange={(e) => {
-          setFormInput((prevState) => ({
-            ...prevState,
-            petsAllowed: e.target.checked,
-          }));
-        }}
-      />
+      {/* PRICE INPUT  */}
+      <FloatingLabel controlId="floatingInput3" label="$USD" className="mb-3">
+        <Form.Control
+          type="number"
+          placeholder="Enter price"
+          name="price"
+          value={formInput.price}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
+      {/* Property type SELECT  */}
+      <FloatingLabel controlId="floatingSelect" label="Main Category">
+        <Form.Select
+          aria-label="category"
+          name="category"
+          onChange={handleChange}
+          className="mb-3"
+          value={formInput.category} // FIXME: modify code to remove error
+          required
+        >
+          <option value="">Select...</option>
+          <option value="props">Props</option>
+          <option value="character art">Character Art</option>
+          <option value="environment art">Environment Art</option>
+          <option value="texturing">Texturing/Material</option>
+          <option value="lighting">Lighting</option>
+          <option value="procedural">Procedural</option>
+        </Form.Select>
+      </FloatingLabel>
 
       {/* SUBMIT BUTTON  */}
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Listing</Button>
+      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Product</Button>
     </Form>
   );
 }
 
 CreateAssetForm.propTypes = {
   obj: PropTypes.shape({
-    title: PropTypes.string,
-    location: PropTypes.string,
-    beds: PropTypes.number,
-    baths: PropTypes.number,
-    pricePerNight: PropTypes.number,
+    name: PropTypes.string,
     description: PropTypes.string,
-    amenities: PropTypes.string,
+    category: PropTypes.string,
+    price: PropTypes.number,
     imageUrl: PropTypes.string,
-    secondImg: PropTypes.string,
-    thirdImg: PropTypes.string,
-    fourthImg: PropTypes.string,
-    petsAllowed: PropTypes.bool,
+    imageUrl_1: PropTypes.string,
+    imageUrl_2: PropTypes.string,
+    imageUrl_3: PropTypes.string,
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }),
 };
 

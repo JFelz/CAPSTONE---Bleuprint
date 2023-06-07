@@ -27,10 +27,10 @@ export default function NavBarAuth() {
             <Link passHref href="/">
               <Nav.Link>Home</Nav.Link>
             </Link>
-            <Link passHref href="/financeoverview">
+            <Link passHref href="/finance/overview">
               <Nav.Link>Analytics</Nav.Link>
             </Link>
-            <Link passHref href="/Manageproducts">
+            <Link passHref href="/MyProducts">
               <Nav.Link>My Products</Nav.Link>
             </Link>
             <Container style={{
