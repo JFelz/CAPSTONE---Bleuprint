@@ -14,8 +14,10 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
   return (
     <>
       <Card style={{
-        height: '400px',
-        width: '250px',
+        display: 'flex',
+        flexDirection: 'row',
+        height: '100px',
+        width: '1000px',
         margin: '10px',
         cursor: 'pointer',
       }}
@@ -25,8 +27,10 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
           src={uidproductObj.imageUrl}
           alt="Image Failure"
           style={{
-            height: '200px',
-            imageSize: 'cover',
+            justifyContent: 'start',
+            alignItems: 'center',
+            height: '95px',
+            width: '120px',
           }}
         />
         <Card.Body style={{ marginTop: '5px' }}>
@@ -43,8 +47,26 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
 
         </Card.Body>
 
-        <Card.Footer className="text-muted">
-          <Card.Text style={{ marginLeft: '85px' }}>${uidproductObj.price}</Card.Text>
+        <Card.Body style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'end',
+          width: '15px',
+        }}
+        >
+          <Card.Body style={{
+            display: 'flex',
+            flexDirection: 'column',
+            padding: '0px',
+            alignItems: 'end',
+          }}
+          >
+            <Card.Text style={{ marginBottom: '5px', width: '50px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
+            <Card.Text style={{ width: '50px' }}>${uidproductObj.price}</Card.Text>
+          </Card.Body>
+        </Card.Body>
+
+        <Card.Footer className="text-muted" style={{ display: 'flex', alignItems: 'center' }}>
           <Link href={`/Manageproducts/edit/${uidproductObj.firebaseKey}`} passHref>
             <Button variant="info" style={{ background: '#35CEB3', color: 'white', border: 'black' }}>EDIT</Button>
           </Link>

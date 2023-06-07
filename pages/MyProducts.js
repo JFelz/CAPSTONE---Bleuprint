@@ -1,12 +1,12 @@
-import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { Button, Container } from 'react-bootstrap';
 import { getUserDigitalAssets } from '../api/digitalAssets';
 import MyProductCards from '../components/MyProductCards';
 import { useAuth } from '../utils/context/authContext';
 
 export default function ManageProducts() {
-  const [uidproducts, setUidproducts] = useState();
+  const [uidproducts, setUidproducts] = useState([]);
   const { user } = useAuth();
 
   const displayUIDProducts = () => {
@@ -15,6 +15,7 @@ export default function ManageProducts() {
 
   useEffect(() => {
     displayUIDProducts();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -24,14 +25,13 @@ export default function ManageProducts() {
           <Button style={{ backgroundColor: '#35CEB3', borderColor: '#35CEB3' }}> Add a Product </Button>
         </Link>
       </Container>
-      <Container>
-        <div style={{ color: 'white', marginTop: '30px' }}>
+      <Container style={{ width: '80%' }}>
+        <div style={{ color: 'white', marginTop: '30px', marginBottom: '30px' }}>
           <h1 style={{ fontSize: '30px' }}> Manage Products </h1>
         </div>
       </Container>
-      <Container>
-        <h1> My UID Products displayed here </h1>
-        <div>
+      <Container style={{ height: '100vh' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           {uidproducts?.map((uidProduct) => <MyProductCards key={uidProduct.firebaseKey} uidproductObj={uidProduct} onUpdate={displayUIDProducts} />)}
         </div>
       </Container>
