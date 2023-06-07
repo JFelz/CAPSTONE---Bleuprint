@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Form from 'react-bootstrap/Form';
+import { Form } from 'react-bootstrap';
 import { useRouter } from 'next/router';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Button from 'react-bootstrap/Button';
@@ -173,6 +173,7 @@ CreateAssetForm.propTypes = {
     imageUrl_2: PropTypes.string,
     imageUrl_3: PropTypes.string,
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }),
 };
 

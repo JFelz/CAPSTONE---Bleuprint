@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function ProductCard({ productObj }) {
   return (
     <>
-      <Link href={`/index/${productObj}`} passHref>
+      <Link href={`/Manageproducts/${productObj.firebaseKey}`} passHref>
         <Card style={{
           height: '400px',
           width: '250px',
@@ -62,6 +62,8 @@ ProductCard.propTypes = {
     seller: PropTypes.string,
     category: PropTypes.string,
     uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
   }).isRequired,
   // onUpdate: PropTypes.func.isRequired,
 };
