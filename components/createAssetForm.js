@@ -33,7 +33,12 @@ function CreateAssetForm({ obj }) {
       updateDigitalAssets(formInput)
         .then(() => router.push('/'));
     } else {
-      const payload = { ...formInput, uid: user.uid, userName: user.displayName };
+      const payload = {
+        ...formInput,
+        uid: user.uid,
+        userName: user.displayName,
+        userImage: user.photoURL,
+      };
       createDigitalAssets(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateDigitalAssets(patchPayload).then(() => {
@@ -95,7 +100,7 @@ function CreateAssetForm({ obj }) {
         <Form.Control
           type="url"
           placeholder="Enter an interior image url"
-          name="secondImg"
+          name="imageUrl_1"
           value={formInput.imageUrl_1}
           onChange={handleChange}
           required

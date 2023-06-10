@@ -38,14 +38,6 @@ export default function ProductCard({ productObj }) {
           </Card.Body>
           <Card.Footer className="text-muted">
             <Card.Text style={{ marginLeft: '85px' }}>${productObj.price}</Card.Text>
-            {/* <Link href={`/Listings/edit/${productObj}`} passHref>
-              <Button variant="info" style={{ background: '#35CEB3', color: 'white', border: 'black' }}>EDIT</Button>
-            </Link>
-            <Button variant="danger" style={{ background: 'black', color: 'white', border: 'black' }} onClick={onUpdate} className="m-2">
-              DELETE
-            </Button> */}
-            {/* </Link>
-            {/* <Link href="/ " passHref> */}
           </Card.Footer>
         </Card>
       </Link>
@@ -58,7 +50,7 @@ ProductCard.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,
-    price: PropTypes.number,
+    price: PropTypes.string,
     seller: PropTypes.string,
     category: PropTypes.string,
     uid: PropTypes.string,
