@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from 'react-bootstrap';
 import { signIn } from '../utils/auth';
 
 function Signin() {
-  const [toggle, setToggle] = useState(true);
   return (
     <div
       className="text-center d-flex flex-column justify-content-center align-content-center"
@@ -20,26 +19,9 @@ function Signin() {
         type="button"
         size="lg"
         className="copy-btn"
-        toggleBool={toggle}
-        onClick={() => {
-          setToggle(true);
-          signIn();
-        }}
+        onClick={signIn}
       >
         Sign In
-      </Button>
-
-      <Button
-        type="button"
-        size="lg"
-        className="copy-btn"
-        toggleBool={toggle}
-        onClick={() => {
-          signIn();
-          setToggle(false);
-        }}
-      >
-        Sign In as Business
       </Button>
       {/* <Button type="button" size="lg" className="copy-btn" onClick={signInBusiness}>
          Business Login
