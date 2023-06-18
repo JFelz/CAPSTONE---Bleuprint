@@ -25,7 +25,13 @@ export default function NavBarAuth() {
           <Nav className="me-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
-              <Nav.Link>Store</Nav.Link>
+              <Nav.Link>Home</Nav.Link>
+            </Link>
+            <Link passHref href="/finance/overview">
+              <Nav.Link>Analytics</Nav.Link>
+            </Link>
+            <Link passHref href="/MyProducts">
+              <Nav.Link>My Products</Nav.Link>
             </Link>
             <Link passHref href="/MyLibrary">
               <Nav.Link>My Library</Nav.Link>
@@ -36,7 +42,7 @@ export default function NavBarAuth() {
             <Container style={{
               display: 'flex',
               flexWrap: 'wrap',
-              width: '30em',
+              width: '20em',
             }}
             />
             <Container style={{
@@ -44,7 +50,9 @@ export default function NavBarAuth() {
               width: 'auto',
             }}
             >
-              <Button style={{ backgroundColor: '#2EB79E', borderWidth: '0px' }}>Become a Seller</Button>
+              <Link passHref href="/Customer/Store">
+                <Button style={{ backgroundColor: '#2EB79E', borderWidth: '0px' }}>Become a Buyer</Button>
+              </Link>
             </Container>
             <Container style={{
               display: 'flex',

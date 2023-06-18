@@ -16,6 +16,17 @@ import {
 } from '../api/digitalAssets';
 import ProductCard from './ProductCard';
 
+const initialState = {
+  name: '',
+  description: '',
+  imageUrl: '',
+  imageUrl_1: '',
+  imageUrl_2: '',
+  imageUrl_3: '',
+  price: 0,
+  category: '',
+};
+
 export default function CategoryBar() {
   const [key, setKey] = useState('home');
   const [products, setProducts] = useState();
@@ -43,7 +54,7 @@ export default function CategoryBar() {
   useEffect(() => {
     displayProducts();
     displayCategories();
-  }, []);
+  });
 
   return (
     <>
@@ -105,7 +116,7 @@ export default function CategoryBar() {
 }
 
 CategoryBar.propTypes = {
-  obj: PropTypes.shape({
+  products: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,
@@ -117,4 +128,97 @@ CategoryBar.propTypes = {
     firebaseKey: PropTypes.string,
   }).isRequired,
   map: PropTypes.func.isRequired,
+};
+
+CategoryBar.propTypes = {
+  char: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    price: PropTypes.number,
+    seller: PropTypes.string,
+    category: PropTypes.string,
+    uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }),
+};
+
+CategoryBar.propTypes = {
+  props: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    price: PropTypes.number,
+    seller: PropTypes.string,
+    category: PropTypes.string,
+    uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }),
+};
+
+CategoryBar.propTypes = {
+  textures: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    price: PropTypes.number,
+    seller: PropTypes.string,
+    category: PropTypes.string,
+    uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }),
+};
+
+CategoryBar.propTypes = {
+  environ: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    price: PropTypes.number,
+    seller: PropTypes.string,
+    category: PropTypes.string,
+    uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }),
+};
+
+CategoryBar.propTypes = {
+  lighting: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    price: PropTypes.number,
+    seller: PropTypes.string,
+    category: PropTypes.string,
+    uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }),
+};
+
+CategoryBar.propTypes = {
+  procedural: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    imageUrl: PropTypes.string,
+    price: PropTypes.number,
+    seller: PropTypes.string,
+    category: PropTypes.string,
+    uid: PropTypes.string,
+    userName: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }),
+};
+
+CategoryBar.defaultProps = {
+  procedural: initialState,
+  lighting: initialState,
+  environ: initialState,
+  textures: initialState,
+  props: initialState,
+  char: initialState,
 };

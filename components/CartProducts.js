@@ -3,14 +3,8 @@ import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import PropTypes from 'prop-types';
-import { deleteDigitalAssets, getUserDigitalAssets } from '../api/digitalAssets';
 
-export default function MyProductCards({ uidproductObj, onUpdate }) {
-  const deleteThisUIDproductCard = () => {
-    if (window.confirm(`Delete ${uidproductObj.name}?`)) {
-      deleteDigitalAssets(uidproductObj.firebaseKey).then(() => onUpdate(getUserDigitalAssets));
-    }
-  };
+export default function CartProducts({ currentProduct }) {
   return (
     <>
       <Card style={{
@@ -24,7 +18,7 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
       >
         <Card.Img
           variant="top"
-          src={uidproductObj.imageUrl}
+          src={currentProduct?.imageUrl}
           alt="Image Failure"
           style={{
             justifyContent: 'start',
@@ -34,16 +28,16 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
           }}
         />
         <Card.Body style={{ marginTop: '5px' }}>
-          <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{uidproductObj.category}</Card.Subtitle>
+          <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{currentProduct.category}</Card.Subtitle>
           <Card.Title style={{
             minHeight: '15px',
             fontFamily: 'Poppins',
             fontWeight: 'Bold',
             fontSize: '16px',
           }}
-          >{uidproductObj.name}
+          >{currentProduct.name}
           </Card.Title>
-          <Card.Subtitle>by { uidproductObj.userName } </Card.Subtitle>
+          <Card.Subtitle>by { currentProduct.userName } </Card.Subtitle>
 
         </Card.Body>
 
@@ -62,16 +56,13 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
           }}
           >
             <Card.Text style={{ marginBottom: '5px', width: '50px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
-            <Card.Text style={{ width: '50px' }}>${uidproductObj.price}</Card.Text>
+            <Card.Text style={{ width: '50px' }}>${currentProduct.price}</Card.Text>
           </Card.Body>
         </Card.Body>
 
         <Card.Footer className="text-muted" style={{ display: 'flex', alignItems: 'center' }}>
-          <Link href={`/Manageproducts/edit/${uidproductObj.firebaseKey}`} passHref>
-            <Button variant="info" style={{ background: '#35CEB3', color: 'white', border: 'black' }}>EDIT</Button>
-          </Link>
           <Link href="/" passHref>
-            <Button variant="danger" style={{ background: 'black', color: 'white', border: 'black' }} onClick={deleteThisUIDproductCard} className="m-2">
+            <Button variant="danger" style={{ background: 'black', color: 'white', border: 'black' }} onClick={alert('Setup Delete Function!')} className="m-2">
               DELETE
             </Button>
           </Link>
@@ -82,19 +73,18 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
   );
 }
 
-MyProductCards.propTypes = {
-  uidproductObj: PropTypes.shape({
+CartProducts.propTypes = {
+  currentProduct: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
     seller: PropTypes.string,
     category: PropTypes.string,
     uid: PropTypes.string,
     userName: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
-  onUpdate: PropTypes.func.isRequired,
 };
 
 /* This is where I create the My Product Cards and then I will be able to create an API call in the MyProducts page that will get all the OBJ's that has the user UID and display it on the page in the form of the MyProductCards. */

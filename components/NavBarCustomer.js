@@ -6,7 +6,7 @@ import {
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
 
-export default function NavBarBusiness() {
+export default function NavBarCustomer() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="#242424" variant="dark">
       <Container>
@@ -25,13 +25,13 @@ export default function NavBarBusiness() {
           <Nav className="me-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link>Store</Nav.Link>
             </Link>
-            <Link passHref href="/finance/overview">
-              <Nav.Link>Analytics</Nav.Link>
+            <Link passHref href="/MyLibrary">
+              <Nav.Link>My Library</Nav.Link>
             </Link>
-            <Link passHref href="/MyProducts">
-              <Nav.Link>My Products</Nav.Link>
+            <Link passHref href="/MyCart">
+              <Nav.Link>My Cart</Nav.Link>
             </Link>
             <Container style={{
               display: 'flex',
@@ -44,7 +44,9 @@ export default function NavBarBusiness() {
               width: 'auto',
             }}
             >
-              <Button style={{ backgroundColor: '#2EB79E', borderWidth: '0px' }}>Become a Buyer</Button>
+              <Link passHref href="/">
+                <Button style={{ backgroundColor: '#2EB79E', borderWidth: '0px' }}>Become a Seller</Button>
+              </Link>
             </Container>
             <Container style={{
               display: 'flex',

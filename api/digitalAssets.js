@@ -33,6 +33,19 @@ const createDigitalAssets = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const createMyCartOrders = (payload) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/myCart.json`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 const deleteDigitalAssets = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${dbURL}/digitalAssets/${firebaseKey}.json`, {
     method: 'DELETE',
@@ -58,8 +71,39 @@ const updateDigitalAssets = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const updateMyCartOrders = (payload) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/myCart/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
 const getUserDigitalAssets = (uid) => new Promise((resolve, reject) => {
   fetch(`${dbURL}/digitalAssets.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getUserCartOrders = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -201,6 +245,9 @@ export {
   getTexturing,
   getLighting,
   getProcedural,
+  getUserCartOrders,
+  createMyCartOrders,
+  updateMyCartOrders,
   getEnvironmentArt,
   getCharacterArt,
   getDigitalAssets,

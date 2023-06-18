@@ -9,9 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pre-commit": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "pre-commit": "next lint"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -32,13 +30,6 @@
     "react-router-dom": "^6.12.0"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.18",
-    "@storybook/addon-interactions": "^7.0.18",
-    "@storybook/addon-links": "^7.0.18",
-    "@storybook/blocks": "^7.0.18",
-    "@storybook/nextjs": "^7.0.18",
-    "@storybook/react": "^7.0.18",
-    "@storybook/testing-library": "^0.0.14-next.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-next": "11.1.2",
@@ -51,7 +42,6 @@
     "eslint-plugin-storybook": "^0.6.12",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
-    "prettier": "^2.4.1",
-    "storybook": "^7.0.18"
+    "prettier": "^2.4.1"
   }
 }
