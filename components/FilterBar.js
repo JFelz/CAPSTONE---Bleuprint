@@ -74,39 +74,39 @@ export default function CategoryBar() {
             <Carousel>
               <Carousel.Item>
                 <div className="d-flex flex-wrap justify-content-center">
-                  {products?.map((product) => <ProductCard key={product.firebaseKey} productObj={product} onUpdate={displayProducts} />)}
+                  {products && products?.map((product) => <ProductCard key={product.firebaseKey} productObj={product} onUpdate={displayProducts} />)}
                 </div>
               </Carousel.Item>
             </Carousel>
           </Tab.Container>
           <Tab eventKey="Props" title="Props">
             <div className="d-flex flex-wrap justify-content-center">
-              {props?.map((prop) => <ProductCard key={prop.firebaseKey} productObj={prop} onUpdate={displayProducts} />)}
+              {props && props?.map((prop) => <ProductCard key={prop.firebaseKey} productObj={prop} onUpdate={displayProducts} />)}
             </div>
           </Tab>
           <Tab eventKey="Textures/Materials" title="Textures/Materials">
             <div className="d-flex flex-wrap justify-content-center">
-              {textures?.map((texture) => <ProductCard key={texture.firebaseKey} productObj={texture} onUpdate={displayProducts} />)}
+              {textures && textures?.map((texture) => <ProductCard key={texture.firebaseKey} productObj={texture} onUpdate={displayProducts} />)}
             </div>
           </Tab>
           <Tab eventKey="Environment Art" title="Environment Art">
             <div className="d-flex flex-wrap justify-content-center">
-              {environ?.map((environment) => <ProductCard key={environment.firebaseKey} productObj={environment} onUpdate={displayProducts} />)}
+              {environ && environ?.map((environment) => <ProductCard key={environment.firebaseKey} productObj={environment} onUpdate={displayProducts} />)}
             </div>
           </Tab>
           <Tab eventKey="Character" title="Character Art">
             <div className="d-flex flex-wrap justify-content-center">
-              {char?.map((character) => <ProductCard key={character.firebaseKey} productObj={character} onUpdate={displayProducts} />)}
+              {char && char?.map((character) => <ProductCard key={character.firebaseKey} productObj={character} onUpdate={displayProducts} />)}
             </div>
           </Tab>
           <Tab eventKey="Lighting" title="Lighting">
             <div className="d-flex flex-wrap justify-content-center">
-              {lighting?.map((lightObj) => <ProductCard key={lightObj.firebaseKey} productObj={lightObj} onUpdate={displayProducts} />)}
+              {lighting && lighting?.map((lightObj) => <ProductCard key={lightObj.firebaseKey} productObj={lightObj} onUpdate={displayProducts} />)}
             </div>
           </Tab>
           <Tab eventKey="Procedural" title="Procedural">
             <div className="d-flex flex-wrap justify-content-center">
-              {procedural?.map((proceduralObj) => <ProductCard key={proceduralObj.firebaseKey} productObj={proceduralObj} onUpdate={displayProducts} />)}
+              {procedural && procedural?.map((proceduralObj) => <ProductCard key={proceduralObj.firebaseKey} productObj={proceduralObj} onUpdate={displayProducts} />)}
             </div>
           </Tab>
         </Tabs>
@@ -156,6 +156,7 @@ CategoryBar.propTypes = {
     userName: PropTypes.string,
     firebaseKey: PropTypes.string,
   }),
+  map: PropTypes.func.isRequired,
 };
 
 CategoryBar.propTypes = {
