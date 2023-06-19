@@ -102,8 +102,8 @@ const getUserDigitalAssets = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const getUserCartOrders = () => new Promise((resolve, reject) => {
-  fetch(`${dbURL}/digitalAssets.json`, {
+const getUserCartOrders = (uid) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/myCart.json?orderBy="cartUser"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

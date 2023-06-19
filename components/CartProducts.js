@@ -11,9 +11,15 @@ export default function CartProducts({ currentProduct }) {
         display: 'flex',
         flexDirection: 'row',
         height: '100px',
-        width: '1000px',
-        margin: '10px',
+        width: '100%',
+        color: 'white',
+        fontSize: '12px',
         cursor: 'pointer',
+        borderTopWidth: '5px',
+        borderTopColor: '#383838',
+        boxSizing: 'content-box',
+        backgroundColor: '#18181C',
+        borderRadius: '0px',
       }}
       >
         <Card.Img
@@ -29,12 +35,13 @@ export default function CartProducts({ currentProduct }) {
         />
         <Card.Body style={{ marginTop: '5px' }}>
           <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{currentProduct.category}</Card.Subtitle>
-          <Card.Title style={{
-            minHeight: '15px',
-            fontFamily: 'Poppins',
-            fontWeight: 'Bold',
-            fontSize: '16px',
-          }}
+          <Card.Title
+            style={{
+              minHeight: '15px',
+              fontFamily: 'Poppins',
+              fontWeight: 'Bold',
+              fontSize: '16px',
+            }}
           >{currentProduct.name}
           </Card.Title>
           <Card.Subtitle>by { currentProduct.userName } </Card.Subtitle>
@@ -56,18 +63,9 @@ export default function CartProducts({ currentProduct }) {
           }}
           >
             <Card.Text style={{ marginBottom: '5px', width: '50px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
-            <Card.Text style={{ width: '50px' }}>${currentProduct.price}</Card.Text>
+            <Card.Text style={{ width: '70px', color: '#7BD45C' }}>USD ${currentProduct.price}</Card.Text>
           </Card.Body>
         </Card.Body>
-
-        <Card.Footer className="text-muted" style={{ display: 'flex', alignItems: 'center' }}>
-          <Link href="/" passHref>
-            <Button variant="danger" style={{ background: 'black', color: 'white', border: 'black' }} onClick={alert('Setup Delete Function!')} className="m-2">
-              DELETE
-            </Button>
-          </Link>
-        </Card.Footer>
-
       </Card>
     </>
   );
@@ -78,7 +76,7 @@ CartProducts.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,
-    price: PropTypes.number,
+    price: PropTypes.string,
     seller: PropTypes.string,
     category: PropTypes.string,
     uid: PropTypes.string,
