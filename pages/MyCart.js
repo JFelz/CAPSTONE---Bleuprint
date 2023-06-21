@@ -1,17 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { Image, Button } from 'react-bootstrap';
 import Link from 'next/link';
-import { getUserCartOrders } from '../api/digitalAssets';
+import { useRouter } from 'next/router';
+import {
+  createMyLibraryProducts,
+  deleteMyCartAssets,
+  getUserCartOrders,
+  updateMyLibraryOrders,
+} from '../api/digitalAssets';
 import CartProducts from '../components/CartProducts';
 import OrderSummCard from '../components/OrderSummCard';
 import { useAuth } from '../utils/context/authContext';
 
 export default function MyCart() {
   const [cart, setCart] = useState();
+  const router = useRouter();
   const { user } = useAuth();
 
   const getMyOrders = () => {
     getUserCartOrders(user.uid).then(setCart);
+  };
+
+  const passToMyLibrary = () => {
+    cart?.map((obj) => createMyLibraryProducts(obj).then(({ name }) => {
+      const patchPayload = { firebaseKey: name };
+      updateMyLibraryOrders(patchPayload).then(() => getMyOrders(deleteMyCartAssets(obj.firebaseKey))).then(router.push('/Confirmation'));
+    }));
   };
 
   const decimalTotal = cart?.reduce((total, obj) => total + obj.price, 0);
@@ -45,7 +59,7 @@ export default function MyCart() {
             </div>
             <h4 className="digiProdTitle">Digital Products</h4>
             <div className="productContainer" style={{ color: 'aqua', alignItems: 'center' }}>
-              {cart?.map((obj) => <CartProducts key={obj.firebaseKey} currentProduct={obj} onUpdate={getUserCartOrders} />)}
+              {cart?.map((obj) => <CartProducts key={obj.firebaseKey} currentProduct={obj} onUpdate={getMyOrders} />)}
             </div>
           </div>
           <div className="Apple">
@@ -84,23 +98,22 @@ export default function MyCart() {
                 ${totalPrice}
               </div>
               <div className="OrderButton">
-                <Link href="/Confirmation" passHref>
-                  <Button
-                    type="button"
-                    className="btn btn-success"
-                    style={{
-                      backgroundColor: '#35CEB3',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      width: '100%',
-                      borderWidth: '0px',
-                      height: '50px',
-                      fontSize: '1.5em',
-                    }}
-                  >
-                    Place Order
-                  </Button>
-                </Link>
+                <Button
+                  type="button"
+                  className="btn btn-success"
+                  style={{
+                    backgroundColor: '#35CEB3',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '100%',
+                    borderWidth: '0px',
+                    height: '50px',
+                    fontSize: '1.5em',
+                  }}
+                  onClick={passToMyLibrary}
+                >
+                  Place Order
+                </Button>
               </div>
             </div>
           </div>

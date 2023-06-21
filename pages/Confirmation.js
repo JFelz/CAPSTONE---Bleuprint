@@ -1,24 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Link from 'next/link';
-import {
-  createMyLibraryProducts,
-  deleteMyCartAssets,
-  getUserCartOrders,
-} from '../api/digitalAssets';
-import CartProducts from '../components/CartProducts';
+import { getUserCartOrders, getUserLibraryOrders } from '../api/digitalAssets';
 import { useAuth } from '../utils/context/authContext';
+import ConfirmProducts from '../components/ConfirmCards';
 
 export default function Confirmation() {
   const [reviewcart, setReviewcart] = useState();
   const { user } = useAuth();
 
   const getMyOrders = () => {
-    getUserCartOrders(user.uid).then(setReviewcart);
-  };
-
-  const passToMyLibrary = () => {
-    reviewcart.map((obj) => createMyLibraryProducts(obj).then(() => getMyOrders(deleteMyCartAssets(obj.firebaseKey))));
+    getUserLibraryOrders(user.uid).then(setReviewcart);
   };
 
   useEffect(() => {
@@ -36,9 +28,9 @@ export default function Confirmation() {
               <h2><b>Confirmed!</b></h2>
               <h5> Thank you for your order! </h5>
             </div>
-            <h4 className="digiProdTitle">Digital Products</h4>
+            <h4 className="digiProdTitle">Total Purchased Products</h4>
             <div className="productContainer" style={{ color: 'aqua', alignItems: 'center' }}>
-              {reviewcart?.map((obj) => <CartProducts key={obj.firebaseKey} currentProduct={obj} onUpdate={getUserCartOrders} />)}
+              {reviewcart?.map((obj) => <ConfirmProducts key={obj.firebaseKey} currentProduct={obj} onUpdate={getUserCartOrders} />)}
 
               <Link href="/MyLibrary" passHref>
                 <Button
@@ -58,24 +50,25 @@ export default function Confirmation() {
                   View in my Library
                 </Button>
               </Link>
-              <Button
-                type="button"
-                className="btn btn-success"
-                style={{
-                  backgroundColor: '#35CEB3',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: '50%',
-                  borderWidth: '0px',
-                  borderRadius: '100px',
-                  height: '50px',
-                  fontSize: '1.5em',
-                  marginTop: '20px',
-                }}
-                onClick={passToMyLibrary}
-              >
-                Continue Shopping
-              </Button>
+              <Link href="/" passHref>
+                <Button
+                  type="button"
+                  className="btn btn-success"
+                  style={{
+                    backgroundColor: '#35CEB3',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: '50%',
+                    borderWidth: '0px',
+                    borderRadius: '100px',
+                    height: '50px',
+                    fontSize: '1.5em',
+                    marginTop: '20px',
+                  }}
+                >
+                  Continue Shopping
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -157,3 +157,18 @@ background-color: #383838;
   margin-top: 35px;
   margin-bottom: 70px;
 }
+
+.MyLibraryCard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.LibraryTitle {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding: 30px;
+
+}
