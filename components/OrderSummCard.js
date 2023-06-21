@@ -1,49 +1,29 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Image from 'react-bootstrap/Image';
-import Link from 'next/link';
 import PropTypes from 'prop-types';
-import { useAuth } from '../utils/context/authContext';
-import { deleteMyCartAssets, getUserCartOrders } from '../api/digitalAssets';
 
-export default function CartProducts({ currentProduct, onUpdate }) {
-  const { user } = useAuth();
-
-  const deleteThisCartProduct = () => {
-    if (window.confirm(`Delete ${currentProduct.name}?`)) {
-      deleteMyCartAssets(currentProduct.firebaseKey).then(() => onUpdate(getUserCartOrders(user.uid)));
-    }
-  };
+export default function OrderSummCard({ currentProduct }) {
   return (
     <>
       <Card style={{
         display: 'flex',
         flexDirection: 'row',
-        height: '100px',
-        width: '100%',
+        height: '85px',
+        width: '99.8%',
         color: 'white',
         fontSize: '12px',
         cursor: 'pointer',
         borderTopWidth: '5px',
+        borderRightWidth: '0px',
+        borderLeftWidth: '0px',
+        borderBottomWidth: '0px',
         borderTopColor: '#383838',
         boxSizing: 'content-box',
         backgroundColor: '#18181C',
         borderRadius: '0px',
       }}
       >
-        <Card.Img
-          variant="top"
-          src={currentProduct?.imageUrl}
-          alt="Image Failure"
-          style={{
-            justifyContent: 'start',
-            alignItems: 'center',
-            height: '95px',
-            width: '120px',
-          }}
-        />
         <Card.Body style={{ marginTop: '5px' }}>
-          <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{currentProduct.category}</Card.Subtitle>
           <Card.Title
             style={{
               minHeight: '15px',
@@ -53,7 +33,14 @@ export default function CartProducts({ currentProduct, onUpdate }) {
             }}
           >{currentProduct.name}
           </Card.Title>
-          <Card.Subtitle>by { currentProduct.userName } </Card.Subtitle>
+          <Card.Subtitle style={{
+            fontFamily: 'Poppins',
+            fontWeight: 'normal',
+            color: '#979797',
+            fontSize: '13px',
+          }}
+          > Standard License
+          </Card.Subtitle>
 
         </Card.Body>
 
@@ -75,25 +62,12 @@ export default function CartProducts({ currentProduct, onUpdate }) {
             <Card.Text style={{ width: '70px', color: '#7BD45C' }}>USD ${currentProduct.price}</Card.Text>
           </Card.Body>
         </Card.Body>
-        <Card.Footer
-          className="text-muted"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            marginRight: '5px',
-            paddingLeft: '1px',
-          }}
-        >
-          <Link href="/MyCart" passHref>
-            <Image style={{ width: '16px', height: '20px' }} src="../TrashIcon.png" alt="" onClick={deleteThisCartProduct} />
-          </Link>
-        </Card.Footer>
       </Card>
     </>
   );
 }
 
-CartProducts.propTypes = {
+OrderSummCard.propTypes = {
   currentProduct: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
@@ -105,7 +79,6 @@ CartProducts.propTypes = {
     userName: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
-  onUpdate: PropTypes.func.isRequired,
 };
 
 /* This is where I create the My Product Cards and then I will be able to create an API call in the MyProducts page that will get all the OBJ's that has the user UID and display it on the page in the form of the MyProductCards. */

@@ -1,13 +1,14 @@
 .flexBox {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .productContainer {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: #121212;
+  margin-right: 10px;
 }
 
 .digiProdTitle {
@@ -19,15 +20,29 @@
   color: white;
   font-size: 15px;
   height: 55px;
-  padding: 10px;
-  margin: 0px;
+  padding-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 0px;
   background-color: #383838;
 }
 
 .myCartTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   color: white;
   font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.ConfirmationTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
   margin-bottom: 20px;
 }
 
@@ -47,6 +62,8 @@
 }
 
 .Apple {
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -79,4 +96,64 @@
   width: 180px;
   padding: 10px;
 
+}
+
+.OrderSubTitles {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+height: 50px;
+margin-top: 15px;
+font-size: 15px;
+color: white;
+background-color: #383838;
+}
+
+.qtyPRICE {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  width: 200px;
+}
+
+.SubTotal {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: #18181C;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.Taxes {
+  color: white;
+  font-size: 17px;
+  padding: 20px;
+  background-color: #18181C;
+}
+
+.Total {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 20px;
+  font-size: 15px;
+  height: 150px;
+  background-color: #383838;
+}
+
+.OrderButton {
+  margin-top: 15px;
+  height: 0px;
+}
+
+.ReturnButton {
+  margin-top: 35px;
+  margin-bottom: 70px;
 }

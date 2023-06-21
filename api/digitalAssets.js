@@ -46,8 +46,45 @@ const createMyCartOrders = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const createMyLibraryProducts = (payload) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/MyLibrary.json`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 const deleteDigitalAssets = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${dbURL}/digitalAssets/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+const deleteMyCartAssets = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/myCart/${firebaseKey}.json`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
+const deleteMyLibraryAssets = ({ firebaseKey }) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/MyLibrary/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -240,11 +277,27 @@ const getSingleDigitalAssets = (firebaseKey) => new Promise((resolve, reject) =>
     .catch(reject);
 });
 
+const getSingleCartAsset = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/digitalAssets/${firebaseKey}.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 export {
   getProps,
   getTexturing,
   getLighting,
   getProcedural,
+  getSingleCartAsset,
+  deleteMyLibraryAssets,
+  createMyLibraryProducts,
+  deleteMyCartAssets,
   getUserCartOrders,
   createMyCartOrders,
   updateMyCartOrders,
