@@ -50,7 +50,7 @@ ProductCard.propTypes = {
     name: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
     seller: PropTypes.string,
     category: PropTypes.string,
     uid: PropTypes.string,

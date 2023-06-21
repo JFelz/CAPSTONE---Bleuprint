@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Image, Button } from 'react-bootstrap';
+import Link from 'next/link';
 import { getUserCartOrders } from '../api/digitalAssets';
+import CartProducts from '../components/CartProducts';
+import OrderSummCard from '../components/OrderSummCard';
 import { useAuth } from '../utils/context/authContext';
 
 export default function MyCart() {
@@ -7,21 +11,104 @@ export default function MyCart() {
   const { user } = useAuth();
 
   const getMyOrders = () => {
-    getUserCartOrders().then(setCart);
+    getUserCartOrders(user.uid).then(setCart);
   };
+
+  const decimalTotal = cart?.reduce((total, obj) => total + obj.price, 0);
+  const totalPrice = decimalTotal?.toFixed(2);
 
   useEffect(() => {
     getMyOrders();
-  });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    (cart?.cartUser === user.uid) ? (
-      <div>
-        <h1> It works! </h1>
+    (cart?.userName === user.userName) ? (
+      <div className="flexBox">
+        <div className="ReturnButton">
+          <Link href="/" passHref>
+            <Button
+              type="button"
+              className="btn btn-success"
+              style={{
+                backgroundColor: '#6A6A6A', width: '10%', borderWidth: '0px', height: '30px', fontSize: '1em', boxSizing: 'content-box',
+              }}
+            >
+              Return To Store
+            </Button>
+          </Link>
+        </div>
+        <div className="cartBox">
+          <div className="shell">
+            <div className="myCartTitle">
+              <h2> My Cart </h2>
+            </div>
+            <h4 className="digiProdTitle">Digital Products</h4>
+            <div className="productContainer" style={{ color: 'aqua', alignItems: 'center' }}>
+              {cart?.map((obj) => <CartProducts key={obj.firebaseKey} currentProduct={obj} onUpdate={getUserCartOrders} />)}
+            </div>
+          </div>
+          <div className="Apple">
+            <div className="OrderSummaryTitle">
+              <h2> Order Summary </h2>
+            </div>
+            <div className="checkoutBox">
+              <div className="OrderSummary">
+                <h1 style={{ fontSize: '15px', margin: '0px', padding: '10px' }}>USERNAME</h1>
+                <div className="userDetails">
+                  <Image style={{ width: '40px', height: '40px', borderRadius: '100px' }} src={user.photoURL} alt="What" />
+                  <h1 style={{ fontSize: '15px', margin: '0px' }}> {user.displayName} </h1>
+                </div>
+              </div>
+            </div>
+            <div className="OrderSection">
+              <div className="OrderSubTitles">
+                <p style={{ margin: '0px', paddingLeft: '25px' }}> ITEMS </p>
+                <div className="qtyPRICE">
+                  <p style={{ margin: '0px' }}>QTY</p>
+                  <p style={{ margin: '0px' }}>PRICE</p>
+                </div>
+              </div>
+              <div>
+                {cart?.map((obj) => <OrderSummCard key={obj.firebaseKey} currentProduct={obj} />)}
+              </div>
+              <div className="SubTotal">
+                <p style={{ margin: '0px', color: '#979797' }}> SUBTOTAL </p>
+                ${totalPrice}
+              </div>
+              <div className="Taxes">
+                <p style={{ margin: '0px', color: '#979797' }}>TAXES</p>
+              </div>
+              <div className="Total">
+                <p><b>TOTAL</b> before taxes</p>
+                ${totalPrice}
+              </div>
+              <div className="OrderButton">
+                <Link href="/Confirmation" passHref>
+                  <Button
+                    type="button"
+                    className="btn btn-success"
+                    style={{
+                      backgroundColor: '#35CEB3',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: '100%',
+                      borderWidth: '0px',
+                      height: '50px',
+                      fontSize: '1.5em',
+                    }}
+                  >
+                    Place Order
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     ) : (
-      <div>
-        <h1> TRY A NEW PLAN </h1>
+      <div style={{ color: 'red' }}>
+        <h1> Something is not working, try again! </h1>
       </div>
     )
   );
