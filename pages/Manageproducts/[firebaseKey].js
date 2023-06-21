@@ -54,6 +54,7 @@ function ViewListing() {
           borderColor: 'transparent',
           margin: '0px',
           padding: '15px',
+          objectFit: 'cover',
         }}
         >
           <Image src={productDetails.userImage} style={{ width: '100px', height: '100px', borderRadius: '15px' }} />
@@ -99,6 +100,7 @@ function ViewListing() {
             className="d-block w-100"
             src={productDetails.imageUrl}
             alt="First slide"
+            style={{ objectFit: 'cover' }}
           />
           <Carousel.Caption>
             <h3>{productDetails.name}</h3>
@@ -112,6 +114,7 @@ function ViewListing() {
             className="d-block w-100"
             src={productDetails.imageUrl_2}
             alt="Second slide"
+            style={{ objectFit: 'cover' }}
           />
 
           <Carousel.Caption>
@@ -126,6 +129,7 @@ function ViewListing() {
             className="d-block w-100"
             src={productDetails.imageUrl_3}
             alt="Third slide"
+            style={{ objectFit: 'cover' }}
           />
 
         </Carousel.Item>

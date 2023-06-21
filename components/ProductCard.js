@@ -20,7 +20,7 @@ export default function ProductCard({ productObj }) {
             alt="Image Failure"
             style={{
               height: '200px',
-              imageSize: 'cover',
+              objectFit: 'cover',
             }}
           />
           <Card.Body style={{ marginTop: '5px' }}>

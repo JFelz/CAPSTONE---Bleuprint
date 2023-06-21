@@ -121,6 +121,19 @@ const updateMyCartOrders = (payload) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const updateMyLibraryOrders = (payload) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/MyLibrary/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
 const getUserDigitalAssets = (uid) => new Promise((resolve, reject) => {
   fetch(`${dbURL}/digitalAssets.json?orderBy="uid"&equalTo="${uid}"`, {
     method: 'GET',
@@ -141,6 +154,24 @@ const getUserDigitalAssets = (uid) => new Promise((resolve, reject) => {
 
 const getUserCartOrders = (uid) => new Promise((resolve, reject) => {
   fetch(`${dbURL}/myCart.json?orderBy="cartUser"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getUserLibraryOrders = (uid) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/MyLibrary.json?orderBy="cartUser"&equalTo="${uid}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -294,7 +325,9 @@ export {
   getTexturing,
   getLighting,
   getProcedural,
+  updateMyLibraryOrders,
   getSingleCartAsset,
+  getUserLibraryOrders,
   deleteMyLibraryAssets,
   createMyLibraryProducts,
   deleteMyCartAssets,

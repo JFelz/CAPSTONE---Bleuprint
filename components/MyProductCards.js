@@ -20,6 +20,7 @@ export default function MyProductCards({ uidproductObj, onUpdate }) {
         width: '1000px',
         margin: '10px',
         cursor: 'pointer',
+        objectFit: 'cover',
       }}
       >
         <Card.Img
