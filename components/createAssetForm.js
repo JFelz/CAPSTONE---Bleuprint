@@ -11,7 +11,6 @@ const initialState = {
   name: '',
   description: '',
   imageUrl: '',
-  imageUrl_1: '',
   imageUrl_2: '',
   imageUrl_3: '',
   price: 0,
@@ -19,7 +18,7 @@ const initialState = {
 };
 
 function CreateAssetForm({ obj }) {
-  const [formInput, setFormInput] = useState([]);
+  const [formInput, setFormInput] = useState(initialState);
   const router = useRouter();
   const { user } = useAuth();
 
@@ -50,9 +49,10 @@ function CreateAssetForm({ obj }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    const newValue = name === 'price' ? parseFloat(value) : value;
     setFormInput((prevState) => ({
       ...prevState,
-      [name]: value,
+      [name]: newValue,
     }));
   };
 
@@ -96,17 +96,6 @@ function CreateAssetForm({ obj }) {
         />
       </FloatingLabel>
 
-      <FloatingLabel controlId="floatingInput2" label="Enter a second product image" className="mb-3">
-        <Form.Control
-          type="url"
-          placeholder="Enter an interior image url"
-          name="imageUrl_1"
-          value={formInput.imageUrl_1}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
       <FloatingLabel controlId="floatingInput2" label="Enter a third product image" className="mb-3">
         <Form.Control
           type="url"
@@ -133,7 +122,7 @@ function CreateAssetForm({ obj }) {
       <FloatingLabel controlId="floatingInput3" label="$USD" className="mb-3">
         <Form.Control
           type="number"
-          placeholder="Enter price"
+          placeholder="number"
           name="price"
           value={formInput.price}
           onChange={handleChange}
@@ -174,7 +163,6 @@ CreateAssetForm.propTypes = {
     category: PropTypes.string,
     price: PropTypes.number,
     imageUrl: PropTypes.string,
-    imageUrl_1: PropTypes.string,
     imageUrl_2: PropTypes.string,
     imageUrl_3: PropTypes.string,
     firebaseKey: PropTypes.string,

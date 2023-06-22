@@ -24,12 +24,12 @@ export default function MyCart() {
   const passToMyLibrary = () => {
     cart?.map((obj) => createMyLibraryProducts(obj).then(({ name }) => {
       const patchPayload = { firebaseKey: name };
-      updateMyLibraryOrders(patchPayload).then(() => getMyOrders(deleteMyCartAssets(obj.firebaseKey))).then(router.push('/Confirmation'));
+      updateMyLibraryOrders(patchPayload).then(() => deleteMyCartAssets(obj.firebaseKey)).then(router.push('/Confirmation'));
     }));
   };
 
-  const decimalTotal = cart?.reduce((total, obj) => total + obj.price, 0);
-  const totalPrice = decimalTotal?.toFixed(2);
+  const toTal = cart?.reduce((final, obj) => final + obj.price, 0);
+  const totalPrice = toTal?.toFixed(2);
 
   useEffect(() => {
     getMyOrders();
