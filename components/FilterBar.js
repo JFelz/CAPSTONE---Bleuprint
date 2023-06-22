@@ -16,6 +16,18 @@ import {
 } from '../api/digitalAssets';
 import ProductCard from './ProductCard';
 
+const initialState = {
+  name: '',
+  description: '',
+  imageUrl: '',
+  price: 0,
+  seller: '',
+  category: '',
+  uid: '',
+  userName: '',
+  firebaseKey: '',
+};
+
 export default function CategoryBar() {
   const [key, setKey] = useState('home');
   const [products, setProducts] = useState();
@@ -115,6 +127,11 @@ CategoryBar.propTypes = {
     uid: PropTypes.string,
     userName: PropTypes.string,
     firebaseKey: PropTypes.string,
-  }).isRequired,
-  map: PropTypes.func.isRequired,
+  }),
+  // eslint-disable-next-line react/require-default-props
+  map: PropTypes.func,
+};
+
+CategoryBar.defaultProps = {
+  products: initialState,
 };

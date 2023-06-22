@@ -3,12 +3,12 @@ import Link from 'next/link';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import PropTypes from 'prop-types';
-import { deleteDigitalAssets, getUserDigitalAssets } from '../api/digitalAssets';
+import { deleteDigitalAssets } from '../api/digitalAssets';
 
-export default function MyProductCards({ uidproductObj, onUpdate }) {
+export default function MyProductCards({ uidproductObj }) {
   const deleteThisUIDproductCard = () => {
     if (window.confirm(`Delete ${uidproductObj.name}?`)) {
-      deleteDigitalAssets(uidproductObj.firebaseKey).then(() => onUpdate(getUserDigitalAssets));
+      deleteDigitalAssets(uidproductObj.firebaseKey);
     }
   };
   return (
@@ -95,7 +95,6 @@ MyProductCards.propTypes = {
     userName: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
-  onUpdate: PropTypes.func.isRequired,
 };
 
 /* This is where I create the My Product Cards and then I will be able to create an API call in the MyProducts page that will get all the OBJ's that has the user UID and display it on the page in the form of the MyProductCards. */
