@@ -30,7 +30,7 @@ export default function Confirmation() {
             </div>
             <h4 className="digiProdTitle">Total Purchased Products</h4>
             <div className="productContainer" style={{ color: 'aqua', alignItems: 'center' }}>
-              {reviewcart?.map((obj) => <ConfirmProducts key={obj.firebaseKey} currentProduct={obj} onUpdate={getUserCartOrders} />)}
+              {reviewcart?.map((obj) => <ConfirmProducts key={obj.firebaseKey} expense={obj} onUpdate={getUserCartOrders} />)}
 
               <Link href="/MyLibrary" passHref>
                 <Button

@@ -188,6 +188,68 @@ const getUserLibraryOrders = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+const getRevenueOrders = (uid) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/MyLibrary.json?orderBy="uid"&equalTo="${uid}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const getSellerExpenses = () => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/SellerExpenses.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        resolve(Object.values(data));
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
+
+const updateSellerExpenses = (payload) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/SellerExpenses/${payload.firebaseKey}.json`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then(resolve)
+    .catch(reject);
+});
+
+const createSellerExpenses = (payload) => new Promise((resolve, reject) => {
+  fetch(`${dbURL}/SellerExpenses.json`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
+});
+
 const getProps = () => new Promise((resolve, reject) => {
   fetch(`${dbURL}/digitalAssets.json?orderBy="category"&equalTo="props"`, {
     method: 'GET',
@@ -324,7 +386,11 @@ export {
   getProps,
   getTexturing,
   getLighting,
+  getSellerExpenses,
+  getRevenueOrders,
   getProcedural,
+  updateSellerExpenses,
+  createSellerExpenses,
   updateMyLibraryOrders,
   getSingleCartAsset,
   getUserLibraryOrders,

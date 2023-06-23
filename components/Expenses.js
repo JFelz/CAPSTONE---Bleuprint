@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
 
-export default function OrderSummCard({ orderCard }) {
+export default function Expenses({ expense }) {
   return (
     <>
       <Card style={{
@@ -31,15 +31,14 @@ export default function OrderSummCard({ orderCard }) {
               fontWeight: 'Bold',
               fontSize: '16px',
             }}
-          >{orderCard.name}
-          </Card.Title>
+          />
           <Card.Subtitle style={{
             fontFamily: 'Poppins',
             fontWeight: 'normal',
             color: '#979797',
             fontSize: '13px',
           }}
-          > Standard License
+          > {expense.name}
           </Card.Subtitle>
 
         </Card.Body>
@@ -48,7 +47,7 @@ export default function OrderSummCard({ orderCard }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'end',
-          width: '15px',
+          width: '20px',
         }}
         >
           <Card.Body style={{
@@ -56,10 +55,10 @@ export default function OrderSummCard({ orderCard }) {
             flexDirection: 'column',
             padding: '0px',
             alignItems: 'end',
+            width: '0px',
           }}
           >
-            <Card.Text style={{ marginBottom: '5px', width: '50px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
-            <Card.Text style={{ width: '70px', color: '#7BD45C' }}>USD ${orderCard.price}</Card.Text>
+            <Card.Text style={{ width: '50px', color: 'white' }}>USD ${expense.amount} </Card.Text>
           </Card.Body>
         </Card.Body>
       </Card>
@@ -67,17 +66,10 @@ export default function OrderSummCard({ orderCard }) {
   );
 }
 
-OrderSummCard.propTypes = {
-  orderCard: PropTypes.shape({
+Expenses.propTypes = {
+  expense: PropTypes.shape({
+    amount: PropTypes.number,
     name: PropTypes.string,
-    description: PropTypes.string,
-    imageUrl: PropTypes.string,
-    price: PropTypes.number,
-    seller: PropTypes.string,
-    category: PropTypes.string,
-    uid: PropTypes.string,
-    userName: PropTypes.string,
-    firebaseKey: PropTypes.string,
   }).isRequired,
 };
 

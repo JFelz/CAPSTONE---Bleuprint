@@ -5,10 +5,10 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { deleteMyCartAssets } from '../api/digitalAssets';
 
-export default function CartProducts({ currentProduct, onUpdate }) {
+export default function CartProducts({ productObj, onUpdate }) {
   const deleteThisCartProduct = () => {
-    if (window.confirm(`Delete ${currentProduct.name}?`)) {
-      deleteMyCartAssets(currentProduct.firebaseKey).then(() => onUpdate());
+    if (window.confirm(`Delete ${productObj.name}?`)) {
+      deleteMyCartAssets(productObj.firebaseKey).then(() => onUpdate());
     }
   };
   return (
@@ -32,7 +32,7 @@ export default function CartProducts({ currentProduct, onUpdate }) {
       >
         <Card.Img
           variant="top"
-          src={currentProduct?.imageUrl}
+          src={productObj?.imageUrl}
           alt="Image Failure"
           style={{
             justifyContent: 'start',
@@ -43,7 +43,7 @@ export default function CartProducts({ currentProduct, onUpdate }) {
           }}
         />
         <Card.Body style={{ marginTop: '5px' }}>
-          <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{currentProduct.category}</Card.Subtitle>
+          <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{productObj.category}</Card.Subtitle>
           <Card.Title
             style={{
               display: 'flex',
@@ -55,9 +55,9 @@ export default function CartProducts({ currentProduct, onUpdate }) {
               fontSize: '16px',
               width: '97%',
             }}
-          >{currentProduct.name}
+          >{productObj.name}
           </Card.Title>
-          <Card.Subtitle>by { currentProduct.userName } </Card.Subtitle>
+          <Card.Subtitle>by { productObj.userName } </Card.Subtitle>
 
         </Card.Body>
 
@@ -76,7 +76,7 @@ export default function CartProducts({ currentProduct, onUpdate }) {
           }}
           >
             <Card.Text style={{ marginBottom: '5px', width: '50px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
-            <Card.Text style={{ width: '70px', color: '#7BD45C' }}>USD ${currentProduct.price}</Card.Text>
+            <Card.Text style={{ width: '70px', color: '#7BD45C' }}>USD ${productObj.price}</Card.Text>
           </Card.Body>
         </Card.Body>
         <Card.Footer
@@ -98,7 +98,7 @@ export default function CartProducts({ currentProduct, onUpdate }) {
 }
 
 CartProducts.propTypes = {
-  currentProduct: PropTypes.shape({
+  productObj: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,

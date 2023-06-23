@@ -41,7 +41,7 @@ function ViewListing() {
     });
   };
 
-  // currentProduct.push(productDetails);
+  // expense.push(productDetails);
 
   return (
     <>
