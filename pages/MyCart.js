@@ -23,7 +23,10 @@ export default function MyCart() {
 
   const passToMyLibrary = () => {
     cart?.map((obj) => createMyLibraryProducts(obj).then(({ name }) => {
-      const patchPayload = { firebaseKey: name };
+      const patchPayload = {
+        firebaseKey: name,
+        isPurchased: true,
+      };
       updateMyLibraryOrders(patchPayload).then(() => deleteMyCartAssets(obj.firebaseKey)).then(router.push('/Confirmation'));
     }));
   };
@@ -59,7 +62,7 @@ export default function MyCart() {
             </div>
             <h4 className="digiProdTitle">Digital Products</h4>
             <div className="productContainer" style={{ color: 'aqua', alignItems: 'center' }}>
-              {cart?.map((obj) => <CartProducts key={obj.firebaseKey} currentProduct={obj} onUpdate={getMyOrders} />)}
+              {cart?.map((obj) => <CartProducts key={obj.firebaseKey} productObj={obj} onUpdate={getMyOrders} />)}
             </div>
           </div>
           <div className="Apple">
@@ -84,7 +87,7 @@ export default function MyCart() {
                 </div>
               </div>
               <div>
-                {cart?.map((obj) => <OrderSummCard key={obj.firebaseKey} currentProduct={obj} />)}
+                {cart?.map((obj) => <OrderSummCard key={obj.firebaseKey} orderCard={obj} />)}
               </div>
               <div className="SubTotal">
                 <p style={{ margin: '0px', color: '#979797' }}> SUBTOTAL </p>

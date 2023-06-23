@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
-export default function ConfirmProducts({ currentProduct }) {
+export default function ConfirmProducts({ expense }) {
   return (
     <>
       <Card style={{
@@ -24,7 +24,7 @@ export default function ConfirmProducts({ currentProduct }) {
       >
         <Card.Img
           variant="top"
-          src={currentProduct?.imageUrl}
+          src={expense?.imageUrl}
           alt="Image Failure"
           style={{
             justifyContent: 'start',
@@ -35,7 +35,7 @@ export default function ConfirmProducts({ currentProduct }) {
           }}
         />
         <Card.Body style={{ marginTop: '5px' }}>
-          <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{currentProduct.category}</Card.Subtitle>
+          <Card.Subtitle style={{ fontSize: '12px', fontFamily: 'Poppins', marginBottom: '2px' }}>{expense.category}</Card.Subtitle>
           <Card.Title
             style={{
               minHeight: '15px',
@@ -43,9 +43,9 @@ export default function ConfirmProducts({ currentProduct }) {
               fontWeight: 'Bold',
               fontSize: '16px',
             }}
-          >{currentProduct.name}
+          >{expense.name}
           </Card.Title>
-          <Card.Subtitle>by { currentProduct.userName } </Card.Subtitle>
+          <Card.Subtitle>by { expense.userName } </Card.Subtitle>
 
         </Card.Body>
 
@@ -65,7 +65,7 @@ export default function ConfirmProducts({ currentProduct }) {
           }}
           >
             <Card.Text style={{ marginBottom: '5px', width: '50px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
-            <Card.Text style={{ width: '80px', color: '#7BD45C' }}>USD ${currentProduct.price}</Card.Text>
+            <Card.Text style={{ width: '80px', color: '#7BD45C' }}>USD ${expense.price}</Card.Text>
           </Card.Body>
         </Card.Body>
         <Card.Footer
@@ -96,7 +96,7 @@ export default function ConfirmProducts({ currentProduct }) {
 }
 
 ConfirmProducts.propTypes = {
-  currentProduct: PropTypes.shape({
+  expense: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
     imageUrl: PropTypes.string,

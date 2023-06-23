@@ -170,5 +170,57 @@ background-color: #383838;
   flex-direction: column;
   height: auto;
   padding: 30px;
-
 }
+
+.TotalRevenue {
+  color: white;
+}
+
+.ProfitMargin {
+  color: white;
+}
+
+.ExpenseSection {
+  display: flex;
+  flex-direction: column;
+  width: 48vw;
+}
+
+.ExpenseTracker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  margin-top: 15px;
+  font-size: 15px;
+  color: white;
+  background-color: #383838;
+  }
+  
+  .qtyAmount {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    width: 200px;
+  }
+  
+  .SubTotalExp {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #383838;
+    height: 100px;
+    padding: 20px;
+    font-size: 15px;
+  }
+  
+  .Taxes {
+    color: white;
+    font-size: 17px;
+    padding: 20px;
+    background-color: #18181C;
+  }
