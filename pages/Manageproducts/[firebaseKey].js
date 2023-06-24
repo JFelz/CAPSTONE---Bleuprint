@@ -100,7 +100,7 @@ function ViewListing() {
             className="d-block w-100"
             src={productDetails.imageUrl}
             alt="First slide"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'contain', backgroundColor: '#0D0D0D', borderRadius: '10px' }}
           />
           <Carousel.Caption>
             <h3>{productDetails.name}</h3>
@@ -114,7 +114,7 @@ function ViewListing() {
             className="d-block w-100"
             src={productDetails.imageUrl_2}
             alt="Second slide"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'contain', backgroundColor: '#0D0D0D', borderRadius: '10px' }}
           />
 
           <Carousel.Caption>
@@ -129,13 +129,13 @@ function ViewListing() {
             className="d-block w-100"
             src={productDetails.imageUrl_3}
             alt="Third slide"
-            style={{ objectFit: 'cover' }}
+            style={{ objectFit: 'contain', backgroundColor: '#0D0D0D', borderRadius: '10px' }}
           />
 
         </Carousel.Item>
       </Carousel>
-      {/* //blue */}
-      <div className="mt-5 d-flex">
+      {/* //Left Side */}
+      <div className="ViewPage">
         <div style={{ width: '50%', backgroundColor: '' }} className="text-black ms-5 details">
           <div style={{
             display: 'flex',
@@ -165,7 +165,7 @@ function ViewListing() {
           </h5>
           <p style={{ color: 'white', fontFamily: 'Poppins light' }}>{productDetails.description}</p>
         </div>
-        {/* Orange */}
+        {/* Right Side */}
         <div style={{
           width: '50%',
           display: 'flex',

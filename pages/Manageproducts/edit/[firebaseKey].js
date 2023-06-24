@@ -4,7 +4,7 @@ import { getSingleDigitalAssets } from '../../../api/digitalAssets';
 import CreateAssetForm from '../../../components/createAssetForm';
 
 export default function EditAssetForm() {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState({});
   const router = useRouter();
   const { firebaseKey } = router.query;
 

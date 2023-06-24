@@ -47,15 +47,6 @@ export default function NavBarAuth() {
             />
             <Container style={{
               display: 'flex',
-              width: 'auto',
-            }}
-            >
-              <Link passHref href="/Customer/Store">
-                <Button style={{ backgroundColor: '#2EB79E', borderWidth: '0px' }}>Become a Buyer</Button>
-              </Link>
-            </Container>
-            <Container style={{
-              display: 'flex',
               justifyContent: 'center',
               width: 'auto',
             }}

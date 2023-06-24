@@ -26,6 +26,7 @@ export default function MyCart() {
       const patchPayload = {
         firebaseKey: name,
         isPurchased: true,
+        customerName: user.displayName,
       };
       updateMyLibraryOrders(patchPayload).then(() => deleteMyCartAssets(obj.firebaseKey)).then(router.push('/Confirmation'));
     }));
