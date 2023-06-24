@@ -83,7 +83,7 @@ const deleteMyCartAssets = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const deleteMyLibraryAssets = ({ firebaseKey }) => new Promise((resolve, reject) => {
+const deleteMyLibraryAssets = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${dbURL}/MyLibrary/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {

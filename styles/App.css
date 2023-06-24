@@ -168,11 +168,52 @@ background-color: #383838;
 .LibraryTitle {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100vh;
   padding: 30px;
 }
 
-.TotalRevenue {
+.OverviewTitle {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  color: rgb(255, 255, 255);
+}
+
+.FinOverviewSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+}
+
+.OrderAndExpenses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.PurchasedOrders {
+  display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start;
+    width: 49%;
+    height: 100vh;
+    margin-top: 15px;
+    font-size: 15px;
+    color: white;
+    background-color: #141414;
+}
+
+.NetProfit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 110px;
+  border-radius: 20px;
+  background-color: rgb(189, 189, 189);
   color: white;
 }
 
@@ -183,7 +224,7 @@ background-color: #383838;
 .ExpenseSection {
   display: flex;
   flex-direction: column;
-  width: 48vw;
+  width: 49%;
 }
 
 .ExpenseTracker {
@@ -196,6 +237,10 @@ background-color: #383838;
   font-size: 15px;
   color: white;
   background-color: #383838;
+  }
+
+  .OrderTracker {
+    width: auto;
   }
   
   .qtyAmount {
@@ -223,4 +268,18 @@ background-color: #383838;
     font-size: 17px;
     padding: 20px;
     background-color: #18181C;
+  }
+
+  .ViewPage { 
+    display: flex;
+    margin-top: 50px;
+    height: 1000px;
+  }
+
+  .ModalFooterViewPage { 
+    display: flex;
+    margin-top: 50px;
+    background-color: 242424;
+    height: 100px;
+    width: 100vw;
   }
