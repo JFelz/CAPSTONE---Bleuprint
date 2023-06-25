@@ -1,0 +1,80 @@
+Date : 2023-06-24 12:55:52
+Directory : c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint
+Total : 40 files,  2796 codes, 68 comments, 283 blanks, all 3147 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| JavaScript |         36 |      2,435 |         68 |        220 |      2,723 |
+| CSS        |          2 |        268 |          0 |         45 |        313 |
+| JSON       |          1 |         47 |          0 |          1 |         48 |
+| Markdown   |          1 |         46 |          0 |         17 |         63 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                          | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                             |         40 |      2,796 |         68 |        283 |      3,147 |
+| . (Files)                                                                                                     |          4 |        142 |          1 |         19 |        162 |
+| api                                                                                                           |          2 |        399 |         18 |         31 |        448 |
+| components                                                                                                    |         17 |      1,275 |         15 |         98 |      1,388 |
+| pages                                                                                                         |         11 |        616 |         25 |         63 |        704 |
+| pages (Files)                                                                                                 |          6 |        289 |         18 |         29 |        336 |
+| pages\Manageproducts                                                                                          |          3 |        236 |          2 |         19 |        257 |
+| pages\Manageproducts (Files)                                                                                  |          2 |        221 |          2 |         15 |        238 |
+| pages\Manageproducts\edit                                                                                     |          1 |         15 |          0 |          4 |         19 |
+| pages\finance                                                                                                 |          2 |         91 |          5 |         15 |        111 |
+| styles                                                                                                        |          2 |        268 |          0 |         45 |        313 |
+| utils                                                                                                         |          4 |         96 |          9 |         27 |        132 |
+| utils (Files)                                                                                                 |          3 |         57 |          2 |         15 |         74 |
+| utils\context                                                                                                 |          1 |         39 |          7 |         12 |         58 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                                                                      | language   | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\.eslintrc.js                               | JavaScript |         45 |          0 |          0 |         45 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\README.md                                  | Markdown   |         46 |          0 |         17 |         63 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\api\digitalAssets.js                       | JavaScript |        384 |          0 |         28 |        412 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\api\youTubeAPI.js                          | JavaScript |         15 |         18 |          3 |         36 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\CartProducts.js                 | JavaScript |        109 |          1 |          6 |        116 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\ConfirmCards.js                 | JavaScript |        106 |          1 |          6 |        113 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\Expenses.js                     | JavaScript |        138 |          1 |          8 |        147 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\FilterBar.js                    | JavaScript |        125 |          2 |          9 |        136 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\FinTechCard.js                  | JavaScript |        106 |          1 |          8 |        115 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\LibraryCard.js                  | JavaScript |         63 |          0 |          3 |         66 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\Loading.js                      | JavaScript |         18 |          0 |          2 |         20 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\MyProductCards.js               | JavaScript |         92 |          1 |          8 |        101 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\NavBarAuth.js                   | JavaScript |         59 |          1 |          2 |         62 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\NavBarCustomer.js               | JavaScript |         62 |          1 |          2 |         65 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\NoAuth.js                       | JavaScript |         16 |          2 |          4 |         22 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\OrderSummCard.js                | JavaScript |         78 |          1 |          6 |         85 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\ProductCard.js                  | JavaScript |         57 |          1 |          4 |         62 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\Signin.js                       | JavaScript |         30 |          1 |          3 |         34 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\TotalRevenue.js                 | JavaScript |         56 |          1 |          8 |         65 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\UserProfile.js                  | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\components\createAssetForm.js              | JavaScript |        160 |          0 |         18 |        178 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\next.config.js                             | JavaScript |          4 |          1 |          1 |          6 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\package.json                               | JSON       |         47 |          0 |          1 |         48 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\Confirmation.js                      | JavaScript |         76 |          1 |          6 |         83 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\Manageproducts\[firebaseKey].js      | JavaScript |        214 |          2 |         13 |        229 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\Manageproducts\edit\[firebaseKey].js | JavaScript |         15 |          0 |          4 |         19 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\Manageproducts\new.js                | JavaScript |          7 |          0 |          2 |          9 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\MyCart.js                            | JavaScript |        125 |          1 |          7 |        133 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\MyLibrary.js                         | JavaScript |         28 |          1 |          5 |         34 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\MyProducts.js                        | JavaScript |         35 |          1 |          5 |         41 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\_app.js                              | JavaScript |         18 |          6 |          3 |         27 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\finance\[firebaseKey].js             | JavaScript |          0 |          0 |          1 |          1 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\finance\overview.js                  | JavaScript |         91 |          5 |         14 |        110 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\pages\index.js                             | JavaScript |          7 |          8 |          3 |         18 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\styles\App.css                             | CSS        |        247 |          0 |         39 |        286 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\styles\globals.css                         | CSS        |         21 |          0 |          6 |         27 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\utils\ViewDirector.js                      | JavaScript |         31 |          2 |          7 |         40 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\utils\auth.js                              | JavaScript |         10 |          0 |          4 |         14 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\utils\client.js                            | JavaScript |         16 |          0 |          4 |         20 |
+| c:\Users\Ken\NSSWorkspace\foundations\inclass\CAPSTONE---Bleuprint\utils\context\authContext.js               | JavaScript |         39 |          7 |         12 |         58 |
+| Total                                                                                                         |            |      2,796 |         68 |        283 |      3,147 |
++---------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+

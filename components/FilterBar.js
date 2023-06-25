@@ -3,7 +3,7 @@ import {
   useState,
   useEffect,
 } from 'react';
-import { Tabs, Tab, Carousel } from 'react-bootstrap';
+import { Tabs, Tab } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import {
   getCharacterArt,
@@ -73,13 +73,9 @@ export default function CategoryBar() {
             }}
           >
             <Tab.Container eventKey="home" title="All" defaultactivekey="first">
-              <Carousel>
-                <Carousel.Item>
-                  <div className="d-flex flex-wrap justify-content-center">
-                    {products && products?.map((product) => <ProductCard key={product.firebaseKey} productObj={product} onUpdate={displayProducts} />)}
-                  </div>
-                </Carousel.Item>
-              </Carousel>
+              <div className="d-flex flex-wrap justify-content-center">
+                {products && products?.map((product) => <ProductCard key={product.firebaseKey} productObj={product} onUpdate={displayProducts} />)}
+              </div>
             </Tab.Container>
             <Tab eventKey="Props" title="Props">
               <div className="d-flex flex-wrap justify-content-center">
