@@ -62,7 +62,7 @@ export default function CategoryBar() {
       <div className="GDCData" />
       <div className="GDCTitle">
         <h1>The #1 Marketplace for 3D Artists</h1>
-        <p style={{ fontSize: '15px' }}><b>Curated 3D environments, characters, procedurals and more. Ready to use in games, film, and VFX projects.</b></p>
+        <p style={{ fontSize: '15px', justifyContent: 'center', alignItems: 'center' }}><b>Curated 3D environments, characters, procedurals and more. Ready to use in games, film, and VFX projects.</b></p>
       </div>
       <div style={{ height: '330px' }} />
       <div className="MainPageBackground">
