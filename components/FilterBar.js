@@ -59,13 +59,19 @@ export default function CategoryBar() {
 
   return (
     <>
+      <div className="GDCData" />
+      <div className="GDCTitle">
+        <h1>The #1 Marketplace for 3D Artists</h1>
+        <p style={{ fontSize: '15px' }}><b>Curated 3D environments, characters, procedurals and more. Ready to use in games, film, and VFX projects.</b></p>
+      </div>
+      <div style={{ height: '330px' }} />
       <div className="MainPageBackground">
         <div>
           <Tabs
             id="controlled-tab-example"
             activeKey={key}
             onSelect={(k) => setKey(k)}
-            className="mb-4 mt-5"
+            className="mt-5 mb-5"
             style={{
               background: '#3D3D3D',
               borderRadius: '50px',
@@ -110,6 +116,7 @@ export default function CategoryBar() {
           </Tabs>
         </div>
       </div>
+      <div className="IndustryData" />
     </>
   );
 }
