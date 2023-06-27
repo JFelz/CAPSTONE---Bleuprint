@@ -34,7 +34,7 @@
 
 @media only screen and (max-width: 1279px) {
 .GDCData {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   background-image: url("https://i.pinimg.com/originals/fb/5d/7e/fb5d7e61806c4946e1a53e418abd198e.jpg");
@@ -42,25 +42,29 @@
   z-index: -1;
   position: absolute;
   height: 400px;
-  left: 0px;;
-  right:0px;
+  left: 0px;
+  right: 100px;
+  width: 1000vw;
+  object-fit: cover;
   pointer-events: none;
+  min-width: 100%;
+  max-width: 100%;
   }
 }
 
-@media only screen and (max-width: 730px) {
+/* @media only screen and (max-width: 730px) {
   .GDCData {
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url("https://i.pinimg.com/originals/fb/5d/7e/fb5d7e61806c4946e1a53e418abd198e.jpg");
-    opacity: 0.5;
+    opacity: 1.5;
     z-index: -1;
     position: absolute;
     height: 400px;
     pointer-events: none;
     }
-  }
+  } */
 
 /* @media only screen and (max-width: 1366px) {
   .HeroBanner_hero__info__NJ0VI {
@@ -85,7 +89,10 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  width: 75vw;
+  text-align: center;
+  left: 150px;
+  right: 150px;
+  width: auto;
   height: 400px;
   color: aliceblue;
   font-weight: 200;
