@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getUserLibraryOrders } from '../api/digitalAssets';
+import Footer from '../components/Footer';
 import LibraryCard from '../components/LibraryCard';
 import { useAuth } from '../utils/context/authContext';
 
@@ -18,12 +19,15 @@ export default function MyLibrary() {
 
   return (
     (library) ? (
-      <div className="LibraryTitle">
-        <h1 style={{ color: 'white', marginBottom: '30px' }}>My Library</h1>
-        <div className="MyLibraryCard">
-          {library && library?.map((obj) => <LibraryCard productObj={obj} key={obj.firebaseKey} onUpdate={getMyLibraryOrder} />)}
+      <>
+        <div className="LibraryTitle">
+          <h1 style={{ color: 'white', marginBottom: '30px' }}>My Library</h1>
+          <div className="MyLibraryCard">
+            {library && library?.map((obj) => <LibraryCard productObj={obj} key={obj.firebaseKey} onUpdate={getMyLibraryOrder} />)}
+          </div>
         </div>
-      </div>
+        <Footer />
+      </>
     ) : (
       <div style={{ color: 'red' }}>
         <h1> </h1>

@@ -9,6 +9,7 @@ import {
 } from 'react-bootstrap';
 import { createMyCartOrders, getSingleDigitalAssets, updateMyCartOrders } from '../../api/digitalAssets';
 import { useAuth } from '../../utils/context/authContext';
+import Footer from '../../components/Footer';
 // import { useAuth } from '../../utils/context/authContext';
 
 function ViewListing() {
@@ -221,6 +222,7 @@ function ViewListing() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

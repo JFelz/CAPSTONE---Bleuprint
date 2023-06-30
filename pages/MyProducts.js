@@ -4,6 +4,7 @@ import { Button, Container } from 'react-bootstrap';
 import { getUserDigitalAssets } from '../api/digitalAssets';
 import MyProductCards from '../components/MyProductCards';
 import { useAuth } from '../utils/context/authContext';
+import Footer from '../components/Footer';
 
 export default function ManageProducts() {
   const [uidproducts, setUidproducts] = useState([]);
@@ -35,6 +36,7 @@ export default function ManageProducts() {
           {uidproducts?.map((uidProduct) => <MyProductCards key={uidProduct.firebaseKey} uidproductObj={uidProduct} onUpdate={displayUIDProducts} />)}
         </div>
       </Container>
+      <Footer />
     </>
   );
 }
