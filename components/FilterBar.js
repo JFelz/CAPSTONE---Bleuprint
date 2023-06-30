@@ -15,6 +15,7 @@ import {
   getTexturing,
 } from '../api/digitalAssets';
 import ProductCard from './ProductCard';
+import useScript from '../utils/useScript';
 
 const initialState = {
   name: '',
@@ -27,6 +28,12 @@ const initialState = {
   userName: '',
   firebaseKey: '',
 };
+
+// const canvas = document.getElementById('canvas3d');
+// const app = new Application(canvas);
+// app.load('https://prod.spline.design/g6TKfDrn-36ZBDDV/scene.splinecode');
+
+// const myviewer = new marmoset.WebViewer( width, height, fileURL );
 
 export default function CategoryBar() {
   const [key, setKey] = useState('home');
@@ -51,6 +58,11 @@ export default function CategoryBar() {
     getLighting().then(setLighting);
     getProcedural().then(setProcedural);
   };
+
+  useScript('https://unpkg.com/@splinetool/viewer@0.9.374/build/spline-viewer.js');
+
+  // const params = { width: 1024, height: 768, autoStart: false };
+  // const myviewer = marmoset.embed("url_to_myscene.mview", params);
 
   useEffect(() => {
     displayProducts();

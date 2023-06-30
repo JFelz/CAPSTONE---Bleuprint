@@ -1,3 +1,7 @@
+.NavBar {
+  background-color: #242424;
+}
+
 .flexBox {
   display: flex;
   flex-direction: column;
@@ -32,14 +36,14 @@
   border-width: 0px;
 }
 
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 2479px) {
 .GDCData {
   display: block;
   justify-content: center;
   align-items: center;
   background-image: url("https://i.pinimg.com/originals/fb/5d/7e/fb5d7e61806c4946e1a53e418abd198e.jpg");
   opacity: 1.5;
-  z-index: -1;
+  z-index: -2;
   position: absolute;
   height: 400px;
   left: 0px;
@@ -51,6 +55,52 @@
   max-width: 100%;
   }
 }
+
+.footerSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+  height: 30vh;
+  margin-top: 100px;
+  padding-top: 50px;
+  left: 0px;
+  right: 100px;
+  position: absolute;
+  color: white;
+  background-color: #242424;
+}
+
+.footerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 800px;
+  margin-bottom: 150px;
+}
+
+.CommunityColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.LegalColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.CompanyColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerTitle {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
 
 /* @media only screen and (max-width: 730px) {
   .GDCData {
@@ -128,6 +178,10 @@
   margin-bottom: 0px;
   background-color: #383838;
 }
+
+/* .footer {
+
+} */
 
 .myCartTitle {
   display: flex;

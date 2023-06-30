@@ -3,6 +3,7 @@ import { getRevenueOrders, getSellerExpenses } from '../../api/digitalAssets';
 import { useAuth } from '../../utils/context/authContext';
 import Expenses from '../../components/Expenses';
 import FinTechCard from '../../components/FinTechCard';
+import Footer from '../../components/Footer';
 
 const FinancialAnalytics = () => {
   const [amount, setAmount] = useState();
@@ -100,6 +101,7 @@ const FinancialAnalytics = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
