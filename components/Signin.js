@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Button, Container, Image,
+  Button, Image,
 } from 'react-bootstrap';
 import { signIn } from '../utils/auth';
 import NoAuth from './NoAuth';
@@ -19,7 +19,7 @@ function Signin() {
             paddingBottom: '0px',
             width: '550px',
             color: 'white',
-            fontSize: '65px',
+            fontSize: '50px',
           }}
           > YOUR BLUEPRINT
           </h1>
@@ -27,11 +27,11 @@ function Signin() {
             <h1 style={{
               fontFamily: 'Poppins',
               fontWeight: 'bold',
-              marginBottom: '10px',
+              marginBottom: '5px',
               paddingBottom: '0px',
               width: '550px',
               color: 'white',
-              fontSize: '65px',
+              fontSize: '50px',
             }}
             >TO <span>FREEDOM</span>
             </h1>
@@ -44,7 +44,7 @@ function Signin() {
               paddingBottom: '0px',
               width: '350px',
               color: 'white',
-              fontSize: '35px',
+              fontSize: '30px',
             }}
             >BEGINS HERE.
             </h3>
@@ -63,19 +63,8 @@ function Signin() {
             </Button>
           </div>
         </div>
-        <div className="BackgroundWidthHolder">
-          <Container style={{ width: '200px', color: '#161616' }} />
-        </div>
-        <div className="SmilingWomanCover">
-          <Container style={{ width: '200px', color: '#161616' }} />
-        </div>
-        <div className="SmilingWoman">
-          <Image
-            src="/GithubGirl.png"
-            alt="Bleuprint"
-            width={1200}
-          />
-        </div>
+        <div className="LeftBackground" />
+        <div className="SmilingWoman" />
       </section>
       <section className="Section2">
         <div className="Section2Title">
