@@ -187,12 +187,12 @@ function Signin() {
               flexShrink: 0,
             }}
           />
-          <div className="FinAnalyticsBody">
+          <div className="WePromoteBody">
             <h3>
-              Financial Analytics
+              We Promote For You
             </h3>
             <p>
-              Safeguarding your valuable data and ensuring compliance with GDPR requirements is our top priority. With our comprehensive suite of online and data security services, we provide you with robust protection against cyber threats, giving you peace of mind and the confidence to focus on what matters most: your business.
+              Struggling with marketing your products? No worries, Bleuprint can sell on your behalf. Bleuprint will market and share your products on the marketplace with the community. For every purchase, Bleuprint receives 75% of the total revenue.
             </p>
           </div>
 
