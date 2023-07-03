@@ -27,10 +27,11 @@
 }
 
 .BleuprintTitle {
-  width: 50%;
-  margin-left: 20px;
+  position: absolute;
+  width: 100%;
+  margin-left: 15%;
   z-index: 5;
-  background-color: #161616;
+  margin-bottom: 150px;
 }
 
 span {
@@ -76,13 +77,16 @@ span {
 }
 
 .SmilingWomanCover {
-  display: flex;
-  flex-direction: row;
+  position: static;
   height: 100vh;
   width: 200px;
   background-color: inherit;
   z-index: 2;
   transform: translate3d(50%,0px, 0px) skewX(-9deg);
+}
+
+.BackgroundWidthHolder {
+  width: 100%;
 }
 
 .copy-btn {
@@ -217,6 +221,59 @@ span {
   padding-top: 50px;
   padding-bottom: 50px;
   color: white;
+}
+
+.OurMission{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 300px;
+  margin-top: 150px;
+  font-size: 17px;
+  color: white;
+}
+
+.Ending {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #C6C6C6;
+  height: 600px;
+}
+
+.Ending:before {
+  position: absolute;
+  width: 50%;
+  height: 400px;
+  content: '';
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transform: translate3d(0px,1197%, 0px) skewY(7deg);
+  z-index: -1;
+}
+
+.Ending:after {
+  position: absolute;
+  width: 50%;
+  height: 400px;
+  content: '';
+  background: inherit;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom left;
+  transform: translate3d(100%,1197%, 0px) skewY(-7deg);
+  z-index: -1;
 }
 
 .flexBox {
