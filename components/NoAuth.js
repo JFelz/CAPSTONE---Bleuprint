@@ -1,21 +1,24 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
-// import NoAuthNavBar from './NoAuthNavBar';
+import {
+  Navbar, Image,
+} from 'react-bootstrap';
 
-function NoAuth({ component: Component, pageProps }) {
+function NoAuth() {
   return (
     <>
-      <div className="container">
-        <Component {...pageProps} />
+      <div className="NoAuthNavBar">
+        <Navbar.Brand style={{ color: '#35CEB3', fontFamily: 'Poppins', fontWeight: 'Bold' }}>
+          <Image
+            src="/captitle.png"
+            width={135}
+            height={40}
+            alt="Bleuprint"
+          />
+        </Navbar.Brand>
       </div>
     </>
   );
 }
-
-NoAuth.propTypes = {
-  component: PropTypes.func.isRequired,
-  pageProps: PropTypes.oneOfType([PropTypes.object]).isRequired,
-};
 
 export default NoAuth;
