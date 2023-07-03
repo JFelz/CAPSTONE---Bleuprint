@@ -17,9 +17,9 @@ function Signin() {
             marginTop: '100px',
             marginBottom: '0px',
             paddingBottom: '0px',
-            width: '400px',
+            width: '550px',
             color: 'white',
-            fontSize: '45px',
+            fontSize: '65px',
           }}
           > YOUR BLUEPRINT
           </h1>
@@ -27,11 +27,11 @@ function Signin() {
             <h1 style={{
               fontFamily: 'Poppins',
               fontWeight: 'bold',
-              marginBottom: '0px',
+              marginBottom: '10px',
               paddingBottom: '0px',
-              width: '400px',
+              width: '550px',
               color: 'white',
-              fontSize: '45px',
+              fontSize: '65px',
             }}
             >TO <span>FREEDOM</span>
             </h1>
@@ -40,10 +40,11 @@ function Signin() {
             <h3 style={{
               fontFamily: 'Poppins',
               fontWeight: 'initial',
-              marginBottom: '50px',
+              marginBottom: '40px',
               paddingBottom: '0px',
               width: '350px',
               color: 'white',
+              fontSize: '35px',
             }}
             >BEGINS HERE.
             </h3>
@@ -61,6 +62,9 @@ function Signin() {
               Sign In
             </Button>
           </div>
+        </div>
+        <div className="BackgroundWidthHolder">
+          <Container style={{ width: '200px', color: '#161616' }} />
         </div>
         <div className="SmilingWomanCover">
           <Container style={{ width: '200px', color: '#161616' }} />
@@ -203,21 +207,31 @@ function Signin() {
           </p>
         </div>
       </section>
-      <div
-        className="text-center d-flex flex-column justify-content-center align-content-center"
-        style={{
-          height: '90vh',
-          padding: '30px',
-          maxWidth: '400px',
-          margin: '0 auto',
-        }}
-      >
-        <h1>Hi there!</h1>
-        <p>This section is under the SignIn.js Component</p>
-        {/* <Button type="button" size="lg" className="copy-btn" onClick={signInBusiness}>
-         Business Login
-      </Button> */}
-      </div>
+      <section className="Ending">
+        <div
+          className="text-center d-flex flex-column justify-content-center align-content-center"
+          style={{
+            height: '15vh',
+            padding: '30px',
+            maxWidth: '400px',
+            margin: '0 auto',
+            marginTop: '100px',
+          }}
+        >
+          <h4>What are you waiting for? </h4>
+          <h2 style={{ marginBottom: '50px', width: '20rem', fontWeight: 'bold' }}>Get your art online!</h2>
+          <div>
+            <Button
+              type="button"
+              size="lg"
+              className="copy-btn"
+              onClick={signIn}
+            >
+              Sign In
+            </Button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
