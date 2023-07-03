@@ -7,7 +7,7 @@
   width: 100vw;
   margin-top: 50px;
   margin-left: 50px;
-
+  z-index: -10;
 }
 
 /*Hero Section of SignIn Page*/
@@ -19,7 +19,6 @@
   align-items: center;
   width: 100%;
   height: 1060px;
-  padding: 300px;
   margin-left: 100px;
   flex-shrink: 0;
   z-index: -10;
@@ -68,25 +67,25 @@ span {
   z-index: 4;
 }
 
+.LeftBackground {
+  margin-right: 0px;
+  width: 80vh;
+  height: 100%;
+  background-color: #161616;
+  transform-origin: bottom left;
+  transform: skewX(-7deg);
+  z-index: 2;
+}
+
 .SmilingWoman {
   margin-right: 0px;
-  width: 70vh;
-  height: 100vh;
+  width: 70%;
+  height: 100%;
   background-color: #434345;
-  z-index: 1;
-}
-
-.SmilingWomanCover {
-  position: static;
-  height: 100vh;
-  width: 200px;
-  background-color: inherit;
-  z-index: -10;
-  transform: translate3d(50%,0px, 0px) skewX(-9deg);
-}
-
-.BackgroundWidthHolder {
-  width: 100%;
+  z-index: 0;
+  background-image: url("/GithubGirl.png");
+  background-size: cover;
+  background-position: 0%;
 }
 
 .copy-btn {
