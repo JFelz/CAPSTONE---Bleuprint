@@ -62,8 +62,8 @@ export default function MyProductCards({ uidproductObj }) {
             alignItems: 'end',
           }}
           >
-            <Card.Text style={{ marginBottom: '5px', width: '50px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
-            <Card.Text style={{ width: '50px' }}>${uidproductObj.price}</Card.Text>
+            <Card.Text style={{ marginBottom: '5px', width: '60px', fontFamily: 'Poppins' }}><b>Price</b></Card.Text>
+            <Card.Text style={{ width: '60px' }}>${uidproductObj.price}</Card.Text>
           </Card.Body>
         </Card.Body>
 

@@ -48,7 +48,7 @@ export default function NavBarAuth() {
               flexDirection: 'row',
               flexWrap: 'wrap',
               justifyContent: 'flex-end',
-              width: '50em',
+              width: '40vw',
             }}
             >
               <Link passHref href="/MyLibrary">
