@@ -67,6 +67,10 @@ function Signin() {
         <div className="SmilingWoman" />
       </section>
       <section className="Section2">
+        <div className="Section2BoxesJoined">
+          <div className="Section2Before" />
+          <div className="Section2After" />
+        </div>
         <div className="Section2Title">
           <p>How Our Platform Works</p>
         </div>
@@ -77,7 +81,7 @@ function Signin() {
               alt="Bleuprint"
             />
             <h5 style={{ marginBottom: '0px', padding: '10px' }}> Sign-In to Open a Store </h5>
-            <p style={{ width: '300px', paddingTop: '0px' }}>All you have to do is Sign-In to start. Create and Upload a product to sell in the Bleuprint marketplace. It consists of a wide variety of digital products meant to help fellow creatives on their journey to financial freedom.</p>
+            <p style={{ width: '300px', paddingTop: '0px', fontSize: '17px' }}> All you have to do is Sign-In to start. You can create and upload a product to sell in the Bleuprint marketplace. The marketplace consists of a wide variety of digital products meant to help fellow creatives on their journey to financial freedom.</p>
           </div>
           <div className="Box2">
             <Image
@@ -85,7 +89,7 @@ function Signin() {
               alt="Bleuprint"
             />
             <h5 style={{ marginBottom: '0px', padding: '10px' }}> Promote Your Products </h5>
-            <p style={{ width: '300px', paddingTop: '0px' }}>Bleuprint will market and share the latest products on the marketplace with the community. It’s completely up to you how much effort and time you want to put towards growing your following and promote your products in your own way.</p>
+            <p style={{ width: '300px', paddingTop: '0px', fontSize: '17px' }}>Bleuprint will market and share the latest products on the marketplace with the community. It’s completely up to you how much effort and time you want to put towards growing your following and promote your products in your own way.</p>
           </div>
           <div className="Box3">
             <Image
@@ -93,13 +97,13 @@ function Signin() {
               alt="Bleuprint"
             />
             <h5 style={{ marginBottom: '0px', padding: '10px' }}> Start Earning </h5>
-            <p style={{ width: '300px', paddingTop: '0px' }}>You will earn 95% of each sale when you sell directly to your customers. You will also have monthly expenses to take into account. You’ll get paid monthly into your PayPal account, or via. bank transfer.</p>
+            <p style={{ width: '300px', paddingTop: '0px', fontSize: '17px' }}>You will earn 95% of each sale when you sell directly to your customers. You will also have monthly expenses to take into account displayed in the Analytics page of your account. You’ll get paid monthly into your PayPal account, or via. bank transfer.</p>
           </div>
         </div>
       </section>
       <section className="BenefitsSection">
         <div className="BreakIntro">
-          <p> Business has never been so easy! Let your entrepreneurial spirit soar as you embark on a remarkable journey towards building a thriving business. </p>
+          <p style={{ fontWeight: 'lighter', fontSize: '18px' }}> Business has never been so easy! Let your spirit soar as you embark on a remarkable journey towards building a thriving business. </p>
         </div>
         <div className="SafeSecure">
           <Image
@@ -114,10 +118,10 @@ function Signin() {
             }}
           />
           <div className="SafeSecureBody">
-            <h3>
+            <h3 style={{ marginBottom: '15px' }}>
               Safe and Secure
             </h3>
-            <p>
+            <p style={{ fontWeight: 'lighter', fontSize: '17px' }}>
               Safeguarding your valuable data and ensuring compliance with GDPR requirements is our top priority. With our comprehensive suite of online and data security services, we provide you with robust protection against cyber threats, giving you peace of mind and the confidence to focus on what matters most: your business.
             </p>
           </div>
@@ -135,10 +139,10 @@ function Signin() {
             }}
           />
           <div className="FinAnalyticsBody">
-            <h3>
+            <h3 style={{ marginBottom: '15px' }}>
               Financial Analytics
             </h3>
-            <p>
+            <p style={{ fontWeight: 'lighter', fontSize: '17px' }}>
               Safeguarding your valuable data and ensuring compliance with GDPR requirements is our top priority. With our comprehensive suite of online and data security services, we provide you with robust protection against cyber threats, giving you peace of mind and the confidence to focus on what matters most: your business.
             </p>
           </div>
@@ -156,58 +160,38 @@ function Signin() {
             }}
           />
           <div className="BusinessFormBody">
-            <h3>
+            <h3 style={{ marginBottom: '15px' }}>
               Business Formation
             </h3>
-            <p>
+            <p style={{ fontWeight: 'lighter', fontSize: '17px' }}>
               Safeguarding your valuable data and ensuring compliance with GDPR requirements is our top priority. With our comprehensive suite of online and data security services, we provide you with robust protection against cyber threats, giving you peace of mind and the confidence to focus on what matters most: your business.
             </p>
           </div>
         </div>
-        <div className="WePromote">
-          <Image
-            src="/ImageWePromote.png"
-            alt="Bleuprint"
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'flex-start',
-              width: '678px',
-              flexShrink: 0,
-            }}
-          />
-          <div className="WePromoteBody">
-            <h3>
-              We Promote For You
-            </h3>
-            <p>
-              Struggling with marketing your products? No worries, Bleuprint can sell on your behalf. Bleuprint will market and share your products on the marketplace with the community. For every purchase, Bleuprint receives 75% of the total revenue.
-            </p>
-          </div>
-
-        </div>
       </section>
       <section className="OurMission">
         <div>
-          <h1>Our Mission</h1>
-          <p> Our mission is to empower digital artists by creating a platform that unlocks new opportunities and financial independence. We are dedicated to revolutionizing the art industry by providing artists with the means to take control of their financial journey and discover alternative revenue streams beyond traditional studio dependency.
+          <h1 style={{ marginBottom: '15px' }}> Our Mission </h1>
+          <p style={{ fontWeight: 'lighter' }}> Our mission is to empower digital artists by creating a platform that unlocks new opportunities and financial independence. We are dedicated to revolutionizing the art industry by providing artists with the means to take control of their financial journey and discover alternative revenue streams beyond traditional studio dependency.
 
             Our platform is designed to redefine the narrative around artists, debunking the myth of the starving artist.
           </p>
         </div>
       </section>
       <section className="Ending">
+        <div className="EndingBoxesJoined">
+          <div className="EndingBefore" />
+          <div className="EndingAfter" />
+        </div>
         <div
-          className="text-center d-flex flex-column justify-content-center align-content-center"
+          className="text-center d-flex flex-column justify-content-center align-items-center"
           style={{
-            height: '15vh',
-            padding: '30px',
-            maxWidth: '400px',
-            margin: '0 auto',
-            marginTop: '100px',
+            height: '10vh',
+            padding: '0px',
+            marginBottom: '150px',
           }}
         >
-          <h4>What are you waiting for? </h4>
+          <h4 style={{ marginBottom: '5px' }}>What are you waiting for? </h4>
           <h2 style={{ marginBottom: '50px', width: '20rem', fontWeight: 'bold' }}>Get your art online!</h2>
           <div>
             <Button
