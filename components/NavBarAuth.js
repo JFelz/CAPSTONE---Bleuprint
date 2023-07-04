@@ -35,28 +35,63 @@ export default function NavBarAuth() {
           >
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/">
-              <Nav.Link>Home</Nav.Link>
+              <Nav.Link>Marketplace</Nav.Link>
             </Link>
             <Link passHref href="/finance/overview">
               <Nav.Link>Analytics</Nav.Link>
             </Link>
             <Link passHref href="/MyProducts">
-              <Nav.Link>My Products</Nav.Link>
-            </Link>
-            <Link passHref href="/MyLibrary">
-              <Nav.Link>My Library</Nav.Link>
-            </Link>
-            <Link passHref href="/MyCart">
-              <Nav.Link>My Cart</Nav.Link>
+              <Nav.Link>My Store</Nav.Link>
             </Link>
             <Container style={{
               display: 'flex',
+              flexDirection: 'row',
               flexWrap: 'wrap',
-              width: '20em',
+              justifyContent: 'flex-end',
+              width: '50em',
             }}
-            />
+            >
+              <Link passHref href="/MyLibrary">
+                <Nav.Link style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '0px',
+                  width: '120px',
+                  marginRight: '10px',
+                }}
+                >
+                  <Image
+                    src="/LibraryIcon.png"
+                    width={20}
+                    style={{ marginRight: '5px' }}
+                  />
+                  My Library
+                </Nav.Link>
+              </Link>
+              <Link passHref href="/MyCart">
+                <Nav.Link style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '0px',
+                  width: '62px',
+                }}
+                >
+                  <Image
+                    src="CartIcon.png"
+                    width={25}
+                    style={{ marginRight: '5px' }}
+                  />
+                  Cart
+                </Nav.Link>
+              </Link>
+            </Container>
             <Container style={{
               display: 'flex',
+              flexDirection: 'row',
               justifyContent: 'center',
               width: 'auto',
             }}

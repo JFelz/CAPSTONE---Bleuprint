@@ -168,19 +168,23 @@ function ViewListing() {
         </div>
         {/* Right Side */}
         <div style={{
-          width: '50%',
+          width: '35%',
+          height: '20%',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          backgroundColor: '',
-          borderWidth: '10px',
-          borderColor: 'black',
+          borderWidth: '4px',
+          borderColor: 'rgb(168, 168, 168)',
+          borderRadius: '9px',
+          borderStyle: 'solid',
+          padding: '30px',
+          marginLeft: '60px',
         }}
         >
 
           <div
             style={{
-              width: '50%',
+              width: '100%',
               height: '75px',
               color: '#F4F4F4',
               fontSize: '20px',
@@ -194,7 +198,7 @@ function ViewListing() {
             style={{
               display: 'flex',
               justifyContent: 'center',
-              width: '50%',
+              width: '85%',
               height: '50px',
               color: '#F4F4F4',
               fontSize: '20px',

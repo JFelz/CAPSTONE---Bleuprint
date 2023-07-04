@@ -356,23 +356,24 @@ span {
   border-width: 0px;
 }
 
-@media only screen and (max-width: 2479px) {
+@media only screen and (max-width: 5479px) {
 .GDCData {
-  display: block;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-image: url("https://i.pinimg.com/originals/fb/5d/7e/fb5d7e61806c4946e1a53e418abd198e.jpg");
-  opacity: 1.5;
+  background-image: url("/GDCHeroImage.png");
+  background-size: cover;
+  background-position: 0%;
+  opacity: 0.8;
   z-index: -2;
   position: absolute;
   height: 400px;
   left: 0px;
   right: 100px;
-  width: 1000vw;
+  width: 100%;
   object-fit: cover;
   pointer-events: none;
-  min-width: 100%;
-  max-width: 100%;
   }
 }
 
@@ -437,7 +438,7 @@ span {
   right: 150px;
   width: auto;
   height: 400px;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
   font-weight: 200;
   pointer-events: none;
 }
