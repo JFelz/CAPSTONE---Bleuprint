@@ -1,7 +1,4 @@
 # Bleuprint
-
-[See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
-
 ## Overview
 This application was designed to provide digital artists in the game, film, and vfx industry with the means to take control of their financial journey by discovering alternative revenue streams beyond the traditional studio dependency.
 
@@ -22,13 +19,58 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 
 [How Our Platform Works]: https://i.pinimg.com/originals/7f/f6/9b/7ff69bfd10e18bcbf6073678f99f5b22.jpg
 
-## ERD for Bleuprint
+## Install Bleuprint For Yourself
+
+1. Set up a Firebase project.
+2. Clone Bleuprint to your local machine.
+
+        git@github.com:JFelz/CAPSTONE---Bleuprint.git
+
+3. Move into your directory
+
+        cd CAPSTONE---Bleuprint
+
+4. When VSCode has opened the application, create a .env file at the root of the project and paste the following keys into the .env file:
+
+        NEXT_PUBLIC_FIREBASE_API_KEY=""
+        NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=""
+        NEXT_PUBLIC_FIREBASE_DATABASE_URL=""
+        NEXT_PUBLIC_FIREBASE_PROJECT_ID=""
+        NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=""
+        NEXT_PUBLIC_FIREBASE_APP_ID=""
+
+5. Insert your firebase config values to the corresponding keys in the previous step.
+
+6. You will have to create four database folders in Firebase to hold different user requests.
+    + Cart
+    + Library
+    + Seller Expenses
+    + Main Marketplace
+
+7. In the root directory of the CLI, run
+
+        npm install or npm i
+
+8. After the install, in the CLI, run
+
+        npm run prepare
+
+9. To start Bleuprint, run
+
+        npm run dev
+
+10. Click [http://localhost:3000](http://localhost:3000) in the terminal to open the DOM.
+
+11. Enjoy freedom through Bleuprint! 
+
+## Planning for Bleuprint
+### ERD
 
 ![ERD Chart]
 
 [ERD Chart]: https://i.pinimg.com/originals/8c/f1/b6/8cf1b6ceb4cb4582a642dde14933ca37.png
 
-## Wireframe/Prototype
+### Wireframe/Prototype
 [Figma Wireframe Link](https://www.figma.com/file/jMBIXJSbGGWuvsFU2hOdPz/Bleuprint?type=design&node-id=0%3A1&mode=design&t=NmHRkzMTwx1YCmTi-1)
 
 ![Wire]
