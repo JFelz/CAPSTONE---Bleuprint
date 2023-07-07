@@ -60,5 +60,3 @@ TotalRevenue.defaultProps = {
   totalPrice: initialState,
   expenseTotal: expenseState,
 };
-
-// Set this component to be the Profit Margin and Total Revenue boxes

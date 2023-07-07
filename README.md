@@ -1,62 +1,79 @@
-# React/Next.js Template
+# Bleuprint
 
 [See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
 
-## Topics
-- [Get Started](#get-started)
-- [Starting the Project](#starting-the-project)
-- [Using axios](#using-axios)
-- [Deploying on Netlify](#deploying-on-netlify)
-___
-## Getting Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-<img width="915" alt="Screen Shot 2022-07-06 at 12 54 01 PM" src="https://user-images.githubusercontent.com/29741570/177612998-4aac9237-5a1e-4f13-8ae0-468587521564.png">
+## Overview
+This application was designed to provide digital artists in the game, film, and vfx industry with the means to take control of their financial journey by discovering alternative revenue streams beyond the traditional studio dependency.
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-<img width="763" alt="Screen Shot 2022-07-06 at 12 54 48 PM" src="https://user-images.githubusercontent.com/29741570/177613126-dd38f678-7553-4f27-8a4a-75680f14d71e.png">
+Within the 3 weeks of creation, the goal was to incorporate CRUD functionality in an exciting way while staying relevant to the consumer market. In addition, gaining more experience and deeper understanding of React, API's, databases, and UI/UX were also of top priority. 
 
-#### 3. Clone your new repo to your local machine
-#### 4. Go to the **NEXT** section
+## Tech Stack
+![TechStack]
 
-## Starting the Project
-1. Create a Firebase project and set up authentication. Use [these videos](https://vimeo.com/showcase/codetracker-firebase) as a refresher if needed.
-1. Create a `.env` file at the root of the project
-1. Copy/Paste the contents of the `.env.sample` file to your newly created `.env` file.
-1. Copy over all of your Firebase values into the `.env` file.
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. Next, run `npm run prepare`. This command sets up husky to track eslint errors on commit that will make your deploy fail on Netlify.
-1. To start your application, run `npm run dev`. THIS IS THE COMMAND YOU WILL USE TO RUN YOUR DEVELOPMENT SERVER FROM NOW ON.
-1. Open [http://localhost:3000](http://localhost:3000) with your browser.
+[TechStack]: ./public/TeckStack.png
+## Features
++ Users can browse and filter other users products on the marketplace.
++ Users can create/edit/update/delete/view their own products.
++ Users can view info details for each public product.
++ Users can add products to their own cart for purchase.
++ Cart feature calculates total costs of products currently in Cart.
++ Users can delete products in Cart.
++ Users can buy and view their purchased products in their own library.
++ Users acquire every customer order of their product.
++ Users can refund customer orders.
++ Users can receive income and monitor their cashflow within their Financial Analytics feature.
 
-### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
+![How Our Platform Works]
+
+[How Our Platform Works]: https://i.pinimg.com/originals/7f/f6/9b/7ff69bfd10e18bcbf6073678f99f5b22.jpg
+
+## Screenshots of Bleuprint
+Login Page
 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+![1a][pup]
 
-**NOTES:** 
-- If you see the following error, you did not follow all the setup steps correctly and failed to add your Firebase creds. Go back and do that NOW.
+[pup]: https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0wZGY5dXAxaDdmemIxOW94Y3ZtN2F5bjlhYnE0ZWx5YXJxZ2xpOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mwQZGFxDYtXFNjOEXP/giphy.gif/500/500?image
 
-<img width="1043" alt="Screen Shot 2022-07-06 at 11 18 45 AM" src="https://user-images.githubusercontent.com/29741570/177612501-c2628f18-4bbd-4de9-aae6-27ffba1172d6.png">
 
-### Deploying on Netlify
-Netlify will automatically detect your project and prepopulate the settings, but should something go wrong and it does not, here are the commands:
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExam0wZGY5dXAxaDdmemIxOW94Y3ZtN2F5bjlhYnE0ZWx5YXJxZ2xpOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mwQZGFxDYtXFNjOEXP/giphy.gif/500/500?image" alt="drawing" width="200"/>
+Bleuprint public marketplace.
 
-- Build Command: `npm run build`
-- Publish directory: `.next`
+![1]
 
-#### Additional Steps to Take on Netlify
-- Add Environmental Variables
-    - Any Enviromental variables you are using in your `.env` file should be added to Netlify. 
-        - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there.
+View Product Details / Cart feature with multiple orders and total cost.
 
-- Update Firebase URL Settings
-    - In Firebase under Authentication select sign in methods, scroll to Authorized domains. Add your Netlify URL.
-        
-## Learn More about Next.js
-To learn more about Next.js, take a look at the following resources:
+![2]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Purchase Confirmation Page / My Library
+
+![3]
+
+Financial Analytics / My Store feature (MVP)
+
+![4]
+
+[1]:https://i.pinimg.com/originals/a8/e3/dc/a8e3dcf734e345a23431309e8578e427.png
+
+
+[2]: https://i.pinimg.com/originals/80/73/18/807318f3b52c06dc82dd5a6752e7528c.png
+[3]: https://i.pinimg.com/originals/43/69/2a/43692a93900d0242c3bd298ef58f59b0.png
+[4]: https://i.pinimg.com/originals/bc/a6/09/bca609efc34863d58ebd5d829a705684.png
+## Wireframe/Prototype
+[Figma Wireframe Link](https://www.figma.com/file/jMBIXJSbGGWuvsFU2hOdPz/Bleuprint?type=design&node-id=0%3A1&mode=design&t=NmHRkzMTwx1YCmTi-1)
+
+![Wireframe]
+
+[Wireframe]: https://i.pinimg.com/originals/da/c3/32/dac332227266fe040bbad7caed6e680e.jpg
+
+## ERD for Bleuprint MVP
+
+![ERD Chart]
+
+[ERD Chart]: https://i.pinimg.com/originals/f7/c6/98/f7c698bba9f47c35d67939d50bb878bb.jpg
+
+### Project Board
+
+[Bleuprint Project Board](https://github.com/users/JFelz/projects/7)
+
+## Loom Video

@@ -107,5 +107,3 @@ const FinancialAnalytics = () => {
 };
 
 export default FinancialAnalytics;
-
-// This will be the whole Financial Anyltics page layout

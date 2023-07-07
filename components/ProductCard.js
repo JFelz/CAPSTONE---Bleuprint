@@ -57,5 +57,4 @@ ProductCard.propTypes = {
     userName: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
-  // onUpdate: PropTypes.func.isRequired,
 };

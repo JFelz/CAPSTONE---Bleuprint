@@ -58,8 +58,14 @@ function Signin() {
               size="lg"
               className="copy-btn"
               onClick={signIn}
+              style={{
+                color: 'white',
+                fontWeight: 'bolder',
+                textShadow: '0px 0.5px 1.5px #3d3d3d',
+                boxShadow: '0px 2px 2px black',
+              }}
             >
-              Sign In
+              Sign In with Google Account
             </Button>
           </div>
         </div>
@@ -199,8 +205,14 @@ function Signin() {
               size="lg"
               className="copy-btn"
               onClick={signIn}
+              style={{
+                color: 'white',
+                fontWeight: 'bolder',
+                textShadow: '0px 0.5px 1.5px #3d3d3d',
+                boxShadow: '0px 2px 2px #8d8d8d',
+              }}
             >
-              Sign In
+              Sign In with Google Account
             </Button>
           </div>
         </div>
