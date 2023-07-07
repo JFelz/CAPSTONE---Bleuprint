@@ -10,7 +10,6 @@ import {
 import { createMyCartOrders, getSingleDigitalAssets, updateMyCartOrders } from '../../api/digitalAssets';
 import { useAuth } from '../../utils/context/authContext';
 import Footer from '../../components/Footer';
-// import { useAuth } from '../../utils/context/authContext';
 
 function ViewListing() {
   const [productDetails, setProductDetails] = useState({});
@@ -41,8 +40,6 @@ function ViewListing() {
       updateMyCartOrders(patchPayload);
     });
   };
-
-  // expense.push(productDetails);
 
   return (
     <>
@@ -135,7 +132,6 @@ function ViewListing() {
 
         </Carousel.Item>
       </Carousel>
-      {/* //Left Side */}
       <div className="ViewPage">
         <div style={{ width: '50%', backgroundColor: '' }} className="text-black ms-5 details">
           <div style={{
@@ -147,7 +143,7 @@ function ViewListing() {
           }}
           >
             <Image src="/viewEye.png" style={{ height: '25px' }} />
-            <p style={{ margin: '0px', paddingLeft: '5px', paddingRight: '5px' }}>viewcount</p>
+            <p style={{ margin: '0px', paddingLeft: '5px', paddingRight: '5px' }}>541</p>
             <p style={{ margin: '0px' }}>Views</p>
           </div>
           <h3 style={{ marginBottom: '5px', color: 'white' }}><b>{productDetails.name}</b></h3>
@@ -166,7 +162,6 @@ function ViewListing() {
           </h5>
           <p style={{ color: 'white', fontFamily: 'Poppins light' }}>{productDetails.description}</p>
         </div>
-        {/* Right Side */}
         <div style={{
           width: '35%',
           height: '20%',

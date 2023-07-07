@@ -60,7 +60,6 @@ function CreateAssetForm({ obj }) {
     <Form onSubmit={handleSubmit}>
       <h2 className="text-white mt-5">{obj.firebaseKey ? 'Update' : 'Create'} Product</h2>
 
-      {/* TITLE INPUT  */}
       <FloatingLabel controlId="floatingInput1" label="Product Name" className="mb-3">
         <Form.Control
           type="text"
@@ -72,7 +71,6 @@ function CreateAssetForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* DESCRIPTION TEXTAREA  */}
       <FloatingLabel controlId="floatingTextarea" label="Product Description" className="mb-3">
         <Form.Control
           as="textarea"
@@ -118,7 +116,6 @@ function CreateAssetForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* PRICE INPUT  */}
       <FloatingLabel controlId="floatingInput3" label="$USD" className="mb-3">
         <Form.Control
           type="number"
@@ -130,14 +127,13 @@ function CreateAssetForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* Property type SELECT  */}
       <FloatingLabel controlId="floatingSelect" label="Main Category">
         <Form.Select
           aria-label="category"
           name="category"
           onChange={handleChange}
           className="mb-3"
-          value={formInput.category} // FIXME: modify code to remove error
+          value={formInput.category}
           required
         >
           <option value="">Select...</option>
@@ -150,7 +146,6 @@ function CreateAssetForm({ obj }) {
         </Form.Select>
       </FloatingLabel>
 
-      {/* SUBMIT BUTTON  */}
       <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Product</Button>
     </Form>
   );

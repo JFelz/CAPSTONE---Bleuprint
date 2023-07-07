@@ -3,14 +3,13 @@
 }
 
 .NoAuthNavBar {
+  position: absolute;
   background-color: #161616;
-  width: 94%;
+  width: 25%;
   margin-top: 50px;
   margin-left: 50px;
-  z-index: -10;
+  z-index: 20;
 }
-
-/*Hero Section of SignIn Page*/
 
 .HeroSection {
   display: flex;
@@ -27,7 +26,7 @@
 
 .BleuprintTitle {
   width: 2%;
-  margin-left: 15%;
+  margin-left: 10%;
   z-index: 5;
   margin-bottom: 150px;
 }
@@ -463,14 +462,6 @@ span {
   pointer-events: none;
 }
 
-/* .IndustryData {
-  background-image: url("https://i.pinimg.com/originals/52/0e/af/520eafa5147a281466c0f13f0a84e4c3.jpg");
-  opacity: 0.5;
-  position: absolute;
-  margin-top: 100px;
-  height: 400px;
-} */
-
 .productContainer {
   display: flex;
   flex-direction: column;
@@ -683,9 +674,9 @@ background-color: #383838;
   align-items: center;
   width: 40%;
   height: 110px;
-  border-radius: 20px;
-  background-color: rgb(189, 189, 189);
-  color: white;
+  border-radius: 13px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(31, 31, 31);
 }
 
 .ProfitMargin {

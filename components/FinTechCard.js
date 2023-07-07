@@ -110,5 +110,3 @@ FinTechCard.propTypes = {
     firebaseKey: PropTypes.string,
   }).isRequired,
 };
-
-/* This is where I create the My Product Cards and then I will be able to create an API call in the MyProducts page that will get all the OBJ's that has the user UID and display it on the page in the form of the MyProductCards. */
