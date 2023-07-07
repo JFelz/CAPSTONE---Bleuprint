@@ -26,9 +26,22 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 
 ![ERD Chart]
 
-[ERD Chart]: https://i.pinimg.com/originals/f7/c6/98/f7c698bba9f47c35d67939d50bb878bb.jpg
+[ERD Chart]: https://i.pinimg.com/originals/8c/f1/b6/8cf1b6ceb4cb4582a642dde14933ca37.png
+
+## Wireframe/Prototype
+[Figma Wireframe Link](https://www.figma.com/file/jMBIXJSbGGWuvsFU2hOdPz/Bleuprint?type=design&node-id=0%3A1&mode=design&t=NmHRkzMTwx1YCmTi-1)
+
+![Wire]
+
+[Wire]: https://i.pinimg.com/originals/da/c3/32/dac332227266fe040bbad7caed6e680e.jpg
+
+## Project Board
+
+[Bleuprint Project Board](https://github.com/users/JFelz/projects/7)
 
 ## Walkthrough Video
+
+[Walkthrough Video Link](https://www.loom.com/share/53906886cb2c4106b8f4a34b68cb646f?sid=f97768b1-1a4c-43da-9c79-b09b277440fc)
 
 ## Created by Jovanni Feliz
 [View LinkedIn Page](https://www.linkedin.com/in/felizk/)
@@ -38,7 +51,7 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 
 
 ## Screenshots of Bleuprint
-Login Page
+Sign-In Page
 
 ![1a]
 
@@ -64,16 +77,7 @@ Financial Analytics / My Store feature (MVP)
 [3]: https://i.pinimg.com/originals/43/69/2a/43692a93900d0242c3bd298ef58f59b0.png
 [4]: https://i.pinimg.com/originals/bc/a6/09/bca609efc34863d58ebd5d829a705684.png
 
-## Wireframe/Prototype
-[Figma Wireframe Link](https://www.figma.com/file/jMBIXJSbGGWuvsFU2hOdPz/Bleuprint?type=design&node-id=0%3A1&mode=design&t=NmHRkzMTwx1YCmTi-1)
-
-![Wireframe]
-
-[Wireframe]: https://i.pinimg.com/originals/da/c3/32/dac332227266fe040bbad7caed6e680e.jpg
-
-### Project Board
-
-[Bleuprint Project Board](https://github.com/users/JFelz/projects/7)
-
 ## Tech Stack
 ![TechStack]
+
+[TechStack]: ./public/TeckStack.png
