@@ -62,9 +62,10 @@ function ViewListing() {
               marginRight: '50px',
               width: '100%',
               color: 'white',
+              fontFamily: 'Poppins',
             }}
             >
-              by <b style={{ color: '#35CEB3' }}>{productDetails.userName}</b>
+              by <b style={{ color: '#35CEB3', fontFamily: 'Poppins' }}>{productDetails.userName}</b>
             </div>
             <div style={{ marginLeft: '20px', width: '100%', color: 'white' }}>
               in {productDetails.category}
@@ -155,7 +156,7 @@ function ViewListing() {
             color: 'white',
             paddingBottom: '15px',
             paddingTop: '15px',
-            fontFamily: 'Poppins regular',
+            fontFamily: 'Poppins',
           }}
           >
             PRODUCT DETAILS

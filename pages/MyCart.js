@@ -51,7 +51,7 @@ export default function MyCart() {
                 type="button"
                 className="btn btn-success"
                 style={{
-                  backgroundColor: '#6A6A6A', width: '10%', borderWidth: '0px', height: '30px', fontSize: '1em', boxSizing: 'content-box',
+                  backgroundColor: '#6A6A6A', width: '15%', borderWidth: '0px', height: '30px', fontSize: '1em', boxSizing: 'content-box',
                 }}
               >
                 Return To Store
