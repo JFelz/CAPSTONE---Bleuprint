@@ -16,7 +16,7 @@ const FinancialAnalytics = () => {
     getSellerExpenses().then(setExpense);
   };
 
-  // Revenue Accumulator
+  // Revenue Accumulator!
   const toTal = amount?.reduce((final, obj) => final + obj.price, 0);
   const totalPrice = toTal?.toFixed(2);
 
