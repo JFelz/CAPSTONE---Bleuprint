@@ -24,13 +24,13 @@ const FinancialAnalytics = () => {
   const expenseAmount = expense?.reduce((total, obj) => total + obj.amount, 0);
   const expenseTotal = expenseAmount?.toFixed(2);
 
-  // ProfitMargin (Revenue - C.O.G.S)
-  const netProfit = totalPrice - expenseTotal;
-  const totalNetProfit = netProfit?.toFixed(2);
-
   const taxOfEachProduct = totalPrice * (8.06 / 100);
   const taxPercentage = taxOfEachProduct?.toFixed(2);
   const finalTax = (Number(expenseTotal) + Number(taxPercentage)).toFixed(2);
+
+  // ProfitMargin (Revenue - C.O.G.S + Tax)
+  const totalNetFinal = totalPrice - finalTax;
+  const totalNetProfitFinal = totalNetFinal.toFixed(2);
 
   useEffect(() => {
     getData();
@@ -65,7 +65,17 @@ const FinancialAnalytics = () => {
           >
             Net Profit
           </h4>
-          <h1>${totalNetProfit}</h1>
+          <div>
+            { totalNetProfitFinal <= 0 && toTal === 0 ? (
+              <div>
+                <h1>${0}.00</h1>
+              </div>
+            ) : (
+              <div>
+                <h1>${totalNetFinal.toFixed(2)}</h1>
+              </div>
+            )}
+          </div>
         </div>
       </div>
       <div className="OrderAndExpenses">
