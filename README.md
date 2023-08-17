@@ -1,4 +1,6 @@
 # Bleuprint
+[Link to LIVE site](https://bleuprint.netlify.app/)
+(Currently in process of making it responsive for mobile)
 ## Overview
 This application was designed to provide digital artists in the game, film, and vfx industry with the means to take control of their financial journey by discovering alternative revenue streams beyond the traditional studio dependency.
 
