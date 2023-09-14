@@ -19,7 +19,7 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 
 ![How Our Platform Works]
 
-[How Our Platform Works]: https://i.pinimg.com/originals/7f/f6/9b/7ff69bfd10e18bcbf6073678f99f5b22.jpg
+[How Our Platform Works]: https://i.pinimg.com/originals/57/51/98/575198f6a93c1c382825591a8293f6c3.jpg
 
 ## Install Bleuprint For Yourself
 
