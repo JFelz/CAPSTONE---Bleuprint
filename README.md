@@ -118,8 +118,8 @@ Financial Analytics / My Store feature (MVP)
 [1a]: https://i.pinimg.com/originals/13/26/e8/1326e86b098d70421f6a378d07f4e9b8.png
 [1]: https://i.pinimg.com/originals/26/88/d8/2688d803cc1cd63644d9ed212a68a924.png
 [2]: https://i.pinimg.com/originals/80/73/18/807318f3b52c06dc82dd5a6752e7528c.png
-[3]: https://i.pinimg.com/originals/43/69/2a/43692a93900d0242c3bd298ef58f59b0.png
-[4]: https://i.pinimg.com/originals/bc/a6/09/bca609efc34863d58ebd5d829a705684.png
+[3]: https://i.pinimg.com/originals/87/9f/d8/879fd8ffb8966e519a21a5468fa2717b.png
+[4]: https://i.pinimg.com/originals/ad/6f/ba/ad6fba8acb858723f38678946d5455dc.png
 
 ## Tech Stack
 ![TechStack]
