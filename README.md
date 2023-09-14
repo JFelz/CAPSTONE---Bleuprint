@@ -73,7 +73,7 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 [ERD Chart]: https://i.pinimg.com/originals/8c/f1/b6/8cf1b6ceb4cb4582a642dde14933ca37.png
 
 ### Wireframe/Prototype
-[Figma Wireframe Link](https://www.figma.com/file/jMBIXJSbGGWuvsFU2hOdPz/Bleuprint?type=design&node-id=0%3A1&mode=design&t=NmHRkzMTwx1YCmTi-1)
+[Figma Wireframe Link](https://i.pinimg.com/originals/6b/c0/c9/6bc0c9270a721712e38df163162c6da1.png)
 
 ![Wire]
 
