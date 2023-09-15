@@ -1,6 +1,15 @@
 @font-face {
-  font-family: Poppins;
-  src: url(https://fonts.google.com/specimen/Poppins);
+  font-family: 'Poppins';
+  font-family: 'Public Sans';
+  src: url('../asset/Poppins/Poppins-Light.ttf');
+  src: url('../asset/Poppins/Poppins-Medium.ttf');
+  src: url('../asset/Poppins/Poppins-Regular.ttf');
+  src: url('../asset/Poppins/Poppins-Bold.ttf');
+  src: url('../asset/Poppins/Poppins-Black.ttf');
+  src: url('../asset/Public Sans/static/PublicSans-Medium.ttf');
+  src: url('../asset/Public Sans/static/PublicSans-Bold.ttf');
+  font-style: normal;
+  font-weight: 400;
 }
 
 .NavBar {
@@ -34,6 +43,10 @@
   margin-left: 10%;
   z-index: 5;
   margin-bottom: 150px;
+}
+
+.Freedom{
+  font-family: 'Poppins';
 }
 
 span {
@@ -325,6 +338,16 @@ span {
   z-index: -1;
 }
 
+.me-auto{
+  font-family: 'Poppins';
+  font-weight: 'normal';
+}
+
+.NavBar{
+  font-family: 'Poppins';
+  font-weight: 'normal';
+}
+
 .flexBox {
   display: flex;
   flex-direction: column;
@@ -347,7 +370,7 @@ span {
   align-items: center;
   margin-top: 5px;
   margin-bottom: 5px;
-  font-family: Poppins;
+  font-family: 'Poppins';
   font-weight: 500;
   font-size: 15px;
   color: rgb(214, 214, 214);
