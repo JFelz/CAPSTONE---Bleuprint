@@ -61,6 +61,7 @@ const FinancialAnalytics = () => {
             alignItems: 'start',
             width: '90%',
             marginLeft: '20px',
+            marginBottom: '0px',
           }}
           >
             Net Profit

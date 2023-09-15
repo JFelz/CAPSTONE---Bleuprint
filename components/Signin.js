@@ -23,9 +23,8 @@ function Signin() {
           }}
           > YOUR BLUEPRINT
           </h1>
-          <div>
+          <div className="Freedom">
             <h1 style={{
-              fontFamily: 'Poppins',
               fontWeight: 'bold',
               marginBottom: '5px',
               paddingBottom: '0px',
@@ -83,7 +82,7 @@ function Signin() {
         <div className="Section2Row">
           <div className="Box1">
             <Image
-              src="/ImageStore.png"
+              src="/IMarketplaceStore.png"
               alt="Bleuprint"
             />
             <h5 style={{ marginBottom: '0px', padding: '10px' }}> Sign-In to Open a Store </h5>

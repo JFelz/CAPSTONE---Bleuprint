@@ -11,7 +11,7 @@ export default function NavBarAuth() {
     <Navbar collapseOnSelect expand="lg" bg="#242424" variant="dark" className="NavBar">
       <Container>
         <Link passHref href="/">
-          <Navbar.Brand style={{ color: '#35CEB3', fontFamily: 'Poppins', fontWeight: 'Bold' }}>
+          <Navbar.Brand style={{ color: '#35CEB3' }}>
             <Image
               src="/captitle.png"
               width={135}
@@ -27,9 +27,7 @@ export default function NavBarAuth() {
             style={{
               justifyContent: 'center',
               alignItems: 'center',
-              fontFamily: 'Poppins',
               color: 'white',
-              fontWeight: '400',
               fontSize: '15px',
             }}
           >

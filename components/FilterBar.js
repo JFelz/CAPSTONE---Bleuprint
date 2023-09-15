@@ -116,7 +116,6 @@ export default function CategoryBar() {
           </Tabs>
         </div>
       </div>
-      <div className="IndustryData" />
     </>
   );
 }
