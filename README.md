@@ -90,7 +90,7 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 ## Created by Jovanni Feliz
 [View LinkedIn Page](https://www.linkedin.com/in/felizk/)
 
-[View Instagram Page](https://www.instagram.com/overscopingdev/)
+[View Instagram Page](https://www.instagram.com/jojointech/?hl=en)
 
 
 
