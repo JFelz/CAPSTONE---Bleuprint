@@ -12,7 +12,7 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 + Users can add products to their own cart for purchase.
 + Cart feature calculates total costs of products currently in Cart.
 + Users can delete products in Cart.
-+ Users can buy and view their purchased products in their own library.
++ Users can view their purchased products in their own library.
 + Users acquire every customer order of their product.
 + Users can refund customer orders.
 + Users can receive income and monitor their cashflow within their Financial Analytics feature.
