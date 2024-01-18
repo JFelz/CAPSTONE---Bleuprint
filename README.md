@@ -88,7 +88,7 @@ Within the 3 weeks of creation, the goal was to incorporate CRUD functionality i
 [Walkthrough Video Link](https://www.loom.com/share/53906886cb2c4106b8f4a34b68cb646f?sid=f97768b1-1a4c-43da-9c79-b09b277440fc)
 
 ## Created by Jovanni Feliz
-[View LinkedIn Page](https://www.linkedin.com/in/felizk/)
+[View LinkedIn Page](https://www.linkedin.com/in/jfeliz/)
 
 [View Instagram Page](https://www.instagram.com/jojointech/?hl=en)
 
